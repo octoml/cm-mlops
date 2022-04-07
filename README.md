@@ -18,3 +18,26 @@ and automate their co-design, benchmarking, optimization and deployment
 across very diverse and continuously changing software and hardware stacks.
 
 *Please stay tuned for more info...*
+
+
+# How to use
+
+## Install CM toolkit and dependencies
+
+Install the CM toolkit as described [here](https://github.com/mlcommons/ck/blob/master/ck2/docs/installation.md).
+
+## Install this repository
+
+Use CM to install this repository on your system:
+
+```bash
+$ cm repo pull octoml@cm-mlops
+```
+
+You can see this and other CM-compatible repositories installed on your system as follows:
+```bash
+$ cm repo list
+```
+
+
+*More to come soon ...*
