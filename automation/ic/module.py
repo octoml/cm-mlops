@@ -50,3 +50,12 @@ class CAutomation(Automation):
         print (json.dumps(i, indent=2))
 
         return {'return':0}
+
+# Demo to show how to use CM components independently if needed
+if __name__ == "__main__":
+    import cmind
+    auto = CAutomation(cmind, __file__)
+
+    r=auto.test({'x':'y'})
+
+    print (r)
