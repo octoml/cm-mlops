@@ -1,0 +1,19 @@
+{
+  "alias": "hello-world",
+  "automation_alias": "ic",
+  "automation_uid": "972c28dafb2543fa",
+  "deps": [
+   {
+     "tags":"print,python,version"
+   },
+   {
+     "tags":"print,python,version"
+   }
+  ],
+  "tags": [
+    "hello world",
+    "hello",
+    "world"
+  ],
+  "uid": "d83274c7eb754d90"
+}

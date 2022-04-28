@@ -13,9 +13,11 @@ if we treat all AI, ML and Systems artifacts including models, data sets, framew
 with dependencies on other artifacts, operating systems and hardware.
 
 We are prototyping [CM-based components](https://github.com/mlcommons/ck/tree/master/ck2) 
-to bridge the gap between MLOps and DevOps, modularize AI and ML systems, 
-and automate their co-design, benchmarking, optimization and deployment 
-across very diverse and continuously changing software and hardware stacks.
+to bridge the gap between MLOps and DevOps, modularize complex computational systems, 
+and enable collaborative, deterministic and reproducible co-design, benchmarking, optimization and deployment 
+of ML Systems across very diverse and continuously changing software and hardware stacks.
+
+
 
 # How to use
 
