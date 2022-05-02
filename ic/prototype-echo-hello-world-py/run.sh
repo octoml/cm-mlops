@@ -1,2 +1,2 @@
 echo "${CM_PYTHON_BIN}"
-echo "HELLO WORLD!"
+${CM_PYTHON_BIN} code.py
