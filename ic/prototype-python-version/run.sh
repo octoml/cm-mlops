@@ -1,1 +1,3 @@
-python3 --version
+python3 --version > tmp-python-version.txt
+cat tmp-python-version.txt
+
