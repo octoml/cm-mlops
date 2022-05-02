@@ -1,19 +1,18 @@
 {
-  "alias": "hello-world",
+  "alias": "prototype-echo-hello-world-py",
   "automation_alias": "ic",
   "automation_uid": "972c28dafb2543fa",
   "deps": [
-   {
-     "tags":"print,python,version"
-   },
-   {
-     "tags":"print,python,version"
-   }
+    {
+      "tags": "meta-package,python"
+    }
   ],
   "tags": [
+    "prototype",
     "hello world",
     "hello",
-    "world"
+    "world",
+    "python"
   ],
   "uid": "d83274c7eb754d90"
 }

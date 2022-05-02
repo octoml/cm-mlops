@@ -1,11 +1,12 @@
 {
-  "alias": "print-python-version",
+  "alias": "prototype-python-version",
   "automation_alias": "ic",
   "automation_uid": "972c28dafb2543fa",
   "tags": [
-   "print",
-   "python",
-   "version"
+    "prototype",
+    "print",
+    "python",
+    "version"
   ],
   "uid": "d3a538fa4abb464b"
 }

@@ -1,0 +1,21 @@
+{
+  "alias": "prototype-image-classification-onnx-py-ck",
+  "automation_alias": "ic",
+  "automation_uid": "972c28dafb2543fa",
+  "deps": [
+    {
+      "tags": "ck-framework"
+    },
+    {
+      "tags": "ck-repo,mlops"
+    }
+  ],
+  "tags": [
+    "prototype",
+    "image-classification",
+    "onnx",
+    "python",
+    "ck"
+  ],
+  "uid": "fa2e8c14460d4d07"
+}

@@ -1,0 +1,1 @@
+export CM_PYTHON_BIN=python3

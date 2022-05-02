@@ -1,0 +1,17 @@
+{
+  "alias": "prototype-image-classification-onnx-py",
+  "automation_alias": "ic",
+  "automation_uid": "972c28dafb2543fa",
+  "deps": [
+    {
+      "tags": "meta-package,python"
+    }
+  ],
+  "tags": [
+    "prototype",
+    "image-classification",
+    "onnx",
+    "python"
+  ],
+  "uid": "3d5e908e472b417e"
+}

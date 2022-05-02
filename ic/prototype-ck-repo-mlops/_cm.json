@@ -1,0 +1,16 @@
+{
+  "alias": "prototype-ck-repo-mlops",
+  "automation_alias": "ic",
+  "automation_uid": "972c28dafb2543fa",
+  "deps": [
+    {
+      "tags": "prototype,ck-framework"
+    }
+  ],
+  "tags": [
+    "prototype",
+    "ck-repo",
+    "mlops"
+  ],
+  "uid": "d3a619b8186e4f74"
+}
