@@ -4,6 +4,9 @@
   "automation_uid": "972c28dafb2543fa",
   "deps": [
     {
+      "tags": "detect,os"
+    },
+    {
       "tags": "sys-tool,echo-off"
     },
     {
@@ -11,9 +14,6 @@
     },
     {
       "tags": "python,version"
-    },
-    {
-      "tags": "sys-tool,cpu-info"
     }
   ],
   "tags": [

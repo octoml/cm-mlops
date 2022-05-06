@@ -1,0 +1,12 @@
+{
+  "alias": "prototype-detect-os",
+  "automation_alias": "ic",
+  "automation_uid": "972c28dafb2543fa",
+  "tags": [
+    "prototype",
+    "detect-os",
+    "detect",
+    "os"
+  ],
+  "uid": "863735b7db8c44fc"
+}
