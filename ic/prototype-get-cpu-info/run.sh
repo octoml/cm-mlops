@@ -1,0 +1,1 @@
+lscpu > tmp-lscpu.out
