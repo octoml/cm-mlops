@@ -1,16 +1,18 @@
 {
-  "alias": "prototype-ck-repo-mlops",
+  "alias": "prototype-get-ck-repo-mlops",
   "automation_alias": "ic",
   "automation_uid": "972c28dafb2543fa",
   "deps": [
     {
-      "tags": "prototype,ck-framework"
+      "tags": "prototype,get,ck"
     }
   ],
   "tags": [
     "prototype",
+    "get",
     "ck-repo",
-    "mlops"
+    "mlops",
+    "ck-repo-mlops"
   ],
   "uid": "d3a619b8186e4f74"
 }

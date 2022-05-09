@@ -7,16 +7,16 @@
       "tags": "detect,os"
     },
     {
-      "tags": "get,sys-utils"
+      "tags": "sys-tool,echo-off"
     },
     {
-      "tags": "echo-off"
+      "tags": "meta-package,python"
     },
     {
-      "tags": "get,python"
+      "tags": "python,version"
     },
     {
-      "tags": "print,python,version"
+      "tags": "sys-tool,cpu-info"
     }
   ],
   "tags": [

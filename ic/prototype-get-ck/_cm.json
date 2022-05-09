@@ -1,14 +1,11 @@
 {
-  "alias": "prototype-ck-framework",
+  "alias": "prototype-get-ck",
   "automation_alias": "ic",
   "automation_uid": "972c28dafb2543fa",
-  "deps": [
-    {
-      "tags":"prototype,sys-deps,ck"
-    }
-  ],
   "tags": [
     "prototype",
+    "get",
+    "ck",
     "ck-framework"
   ],
   "uid": "5575126797174cac"
