@@ -19,7 +19,7 @@ def preprocess(i):
         cm = automation.cmind
 
         path = os.getcwd()
-        
+
         clean_dirs = env.get('CM_CLEAN_DIRS','').strip()
         if clean_dirs!='':
             import shutil
@@ -56,5 +56,4 @@ def preprocess(i):
         paths.insert(0,os.path.join(path, 'bin'))
         env['CM_PATH_LIST']=paths
 
-    
     return {'return':0}

@@ -3,6 +3,7 @@
   "automation_alias": "ic",
   "automation_uid": "972c28dafb2543fa",
   "env": {
+    "CM_SUDO": "sudo",
     "CM_CLEAN_DIRS": "bin",
     "CM_PACKAGE_WIN_URL": "https://zenodo.org/record/6501550/files/cm-artifact-os-windows-32.zip"
   },
