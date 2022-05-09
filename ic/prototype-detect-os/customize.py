@@ -3,15 +3,13 @@ import os
 
 def preprocess(i):
 
-    cm = i['cmind']
+    automation = i['automation']
+    cmind = automation.cmind
 
     env = i['env']
     state = i['state']
 
-    r = cm.access({'action':'get_host_os_info', 'automation':'utils,dc2743f8450541e3'})
-    if r['return']>0: return r
-
-    os_info=r['info']
+    os_info=i['os_info']
 
     # Update env variables
     utils.update_dict_if_empty(env, 'CM_HOST_OS_TYPE', os_info['platform'])

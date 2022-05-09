@@ -7,6 +7,9 @@
       "tags": "detect,os"
     },
     {
+      "tags": "get,sys-utils"
+    },
+    {
       "tags": "sys-tool,echo-off"
     },
     {
