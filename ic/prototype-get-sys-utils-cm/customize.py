@@ -52,7 +52,7 @@ def preprocess(i):
             os.remove(filename)
 
         # Add to path
-        paths = env.get('CM_PATH_LIST',[])
+        paths = env.get('CM_PATH_LIST', [])
         paths.insert(0,os.path.join(path, 'bin'))
         env['CM_PATH_LIST']=paths
 

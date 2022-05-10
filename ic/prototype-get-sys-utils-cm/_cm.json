@@ -7,6 +7,7 @@
     "CM_PACKAGE_WIN_URL": "https://zenodo.org/record/6501550/files/cm-artifact-os-windows-32.zip",
     "CM_SUDO": "sudo"
   },
+  "install":true,
   "tags": [
     "prototype",
     "get",

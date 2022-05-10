@@ -1,1 +1,5 @@
+IF NOT DEFINED CM_CURRENT_IC_PATH SET CM_CURRENT_IC_PATH=%CD%
+
 python %CM_CURRENT_IC_PATH%\code.py
+
+echo CM_NEW_VAR_FROM_RUN=XYZ > tmp-run-env.out
