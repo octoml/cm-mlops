@@ -4,7 +4,7 @@
   "automation_uid": "972c28dafb2543fa",
   "deps": [
     {
-      "tags": "sys-tool,echo-off"
+      "tags": "echo-off"
     }
   ],
   "tags": [

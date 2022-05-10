@@ -2,6 +2,14 @@
   "alias": "prototype-print-python-version",
   "automation_alias": "ic",
   "automation_uid": "972c28dafb2543fa",
+  "deps": [
+    {
+      "tags": "echo-off"
+    },
+    {
+      "tags": "get,python"
+    }
+  ],
   "tags": [
     "prototype",
     "print",

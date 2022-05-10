@@ -2,6 +2,13 @@
   "alias": "prototype-get-python",
   "automation_alias": "ic",
   "automation_uid": "972c28dafb2543fa",
+  "auto_detect":true,
+  "deps": [
+    {
+      "tags": "echo-off"
+    }
+  ],
+  "install":true,
   "tags": [
     "prototype",
     "get",

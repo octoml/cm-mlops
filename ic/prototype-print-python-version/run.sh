@@ -1,5 +1,3 @@
-python3 --version > tmp-python-version.txt
-
 echo ""
-cat tmp-python-version.txt
+%CM_PYTHON_BIN% --version
 

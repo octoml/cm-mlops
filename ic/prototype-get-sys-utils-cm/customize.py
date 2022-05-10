@@ -6,6 +6,7 @@ def preprocess(i):
     os_info = i['os_info']
 
     env = i['env']
+    new_env = i['new_env']
 
     # Test (not needed - will be removed)
     if env.get('CM_SKIP_SYS_UTILS','') in [True, 'YES', 'yes', 'on', 'ON']:
@@ -52,8 +53,6 @@ def preprocess(i):
             os.remove(filename)
 
         # Add to path
-        paths = env.get('CM_PATH_LIST', [])
-        paths.insert(0,os.path.join(path, 'bin'))
-        env['CM_PATH_LIST']=paths
+        new_env['CM_PATH_LIST']=[os.path.join(path, 'bin')]
 
     return {'return':0}

@@ -6,41 +6,39 @@ def preprocess(i):
     automation = i['automation']
     cmind = automation.cmind
 
-    env = i['env']
-    state = i['state']
+    new_env = i['new_env']
+    new_state = i['new_state']
 
     os_info=i['os_info']
 
     # Update env variables
-    utils.update_dict_if_empty(env, 'CM_HOST_OS_TYPE', os_info['platform'])
-    utils.update_dict_if_empty(env, 'CM_HOST_OS_BITS', os_info['bits'])
-    utils.update_dict_if_empty(env, 'CM_HOST_PYTHON_BITS', os_info['python_bits'])
+    new_env['CM_HOST_OS_TYPE']=os_info['platform']
+    new_env['CM_HOST_OS_BITS']=os_info['bits']
+    new_env['CM_HOST_PYTHON_BITS']=os_info['python_bits']
 
-    state['os_info']=os_info
+    new_state['os_info']=os_info
 
-    if os.path.isfile('tmp-run.out'):
-        os.remove('tmp-run.out')
+    if os.path.isfile('tmp-run-env.out'):
+        os.remove('tmp-run-env.out')
 
     return {'return':0}
 
 
 def postprocess(i):
 
-    state = i['state']
+    new_state = i['new_state']
 
-    env = i['env']
+    new_env = i['new_env']
 
-    if not os.path.isfile('tmp-run.out'):
-        return {'return':1, 'error':'tmp-run.out was not generated'}
-
-    r = utils.load_txt(file_name='tmp-run.out')
+    r = utils.load_txt(file_name='tmp-run-env.out',
+                       check_if_exists = True)
     if r['return']>0: return r
 
     s = r['string'].split('\n')
 
-    state['os_uname_machine']=s[0]
-    state['os_uname_all']=s[1]
+    new_state['os_uname_machine']=s[0]
+    new_state['os_uname_all']=s[1]
 
-    utils.update_dict_if_empty(env, 'CM_HOST_OS_MACHINE', state['os_uname_machine'])
+    new_env['CM_HOST_OS_MACHINE']=new_state['os_uname_machine']
 
     return {'return':0}

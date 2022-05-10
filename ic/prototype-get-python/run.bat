@@ -1,1 +1,5 @@
-set CM_PYTHON_BIN=python
+IF NOT DEFINED CM_PYTHON_BIN SET CM_PYTHON_BIN=python.exe
+
+echo %CM_PYTHON_BIN_WITH_PATH%
+%CM_PYTHON_BIN% --version > tmp-ver.out
+
