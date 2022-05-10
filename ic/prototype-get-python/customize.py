@@ -8,7 +8,7 @@ def preprocess(i):
     new_env = i['new_env']
 
     env_path = os.environ.get('PATH','')
-    
+
     # If windows, download here otherwise use run.sh
     if os_info['platform'] == 'windows':
         file_name = 'python.exe'
@@ -21,7 +21,7 @@ def preprocess(i):
                                            'select':True,
                                            'recursion_spaces':i['recursion_spaces']})
     if r['return']>0: return r
-    
+
     found_paths = r['found_paths']
 
     if len(found_paths)==0:
@@ -34,12 +34,12 @@ def preprocess(i):
 
     path_bin = os.path.dirname(found_path)
     paths_bin.append(path_bin)
-    
+
     if os_info['platform'] == 'windows':
         paths_bin.append(path_bin+'\\Scripts')
 
     new_env['CM_PATH_LIST'] = paths_bin
-        
+
     python_bin = file_name
 
     new_env['CM_PYTHON_BIN']=python_bin
@@ -49,6 +49,7 @@ def preprocess(i):
         os.remove('tmp-ver.out')
 
     return {'return':0}
+
 
 def postprocess(i):
 

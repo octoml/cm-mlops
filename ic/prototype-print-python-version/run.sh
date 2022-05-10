@@ -1,3 +1,3 @@
 echo ""
-%CM_PYTHON_BIN% --version
+${CM_PYTHON_BIN} --version
 

@@ -30,11 +30,12 @@ def postprocess(i):
 
     new_env = i['new_env']
 
-    r = utils.load_txt(file_name='tmp-run-env.out',
-                       check_if_exists = True)
+    r = utils.load_txt(file_name='tmp-run.out',
+                       check_if_exists = True,
+                       split = True)
     if r['return']>0: return r
 
-    s = r['string'].split('\n')
+    s = r['list']
 
     new_state['os_uname_machine']=s[0]
     new_state['os_uname_all']=s[1]
