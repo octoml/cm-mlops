@@ -16,6 +16,9 @@
       "tags": "get,python"
     },
     {
+      "tags": "get,dataset,image-classification"
+    },
+    {
       "tags": "get,ml-model,image-classification,onnx"
     }
   ],
