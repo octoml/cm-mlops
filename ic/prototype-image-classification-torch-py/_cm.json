@@ -1,0 +1,39 @@
+{
+  "alias": "prototype-image-classification-torch-py",
+  "automation_alias": "ic",
+  "automation_uid": "972c28dafb2543fa",
+  "env": {
+     "CM_BATCH_SIZE":"1",
+     "CM_BATCH_COUNT":"1"
+  },
+  "deps": [
+    {
+      "tags": "detect,os"
+    },
+    {
+      "tags": "get,sys-utils-cm"
+    },
+    {
+      "tags": "echo-off"
+    },
+    {
+      "tags": "get,python"
+    },
+    {
+      "tags": "get,dataset,preprocessed,image-classification"
+    },
+    {
+      "tags": "get,dataset-aux,image-classification"
+    },
+    {
+      "tags": "get,imagenet-helper"
+    }
+  ],
+  "tags": [
+    "prototype",
+    "image-classification",
+    "torch",
+    "python"
+  ],
+  "uid": "e3986ae887b84ca8"
+}

@@ -1,0 +1,40 @@
+{
+  "alias": "prototype-get-imagenet-preprocessed",
+  "automation_alias": "ic",
+  "automation_uid": "972c28dafb2543fa",
+  "install":true,
+  "deps": [
+    {
+      "tags": "get,sys-utils-cm"
+    },
+    {
+      "tags": "echo-off"
+    },
+    {
+      "tags": "get,python"
+    },
+    {
+      "tags": "get,dataset,image-classification,original"
+    }
+  ],
+  "new_env": {
+    "CM_DATASET": "IMAGENET"
+  },
+  "tags": [
+    "prototype",
+    "get",
+    "dataset",
+    "imagenet",
+    "ILSVRC",
+    "image-classification",
+    "preprocessed"
+  ],
+  "variations": {
+    "1": {
+      "new_env": {
+        "CM_DATASET_SIZE": "1"
+      }
+    }
+  },
+  "uid": "f259d490bbaf45f5"
+}
