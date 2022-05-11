@@ -1,5 +1,8 @@
 20220511:
  * Added prototype of ic::prototype-get-ml-model-resnet50-onnx with variations
  * Added prototype of ic::prototype-get-imagenet-val with variations
+ * Added prototype of ic::prototype-get-imagenet-aux with variations
+
+
 
 
