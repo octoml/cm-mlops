@@ -19,6 +19,7 @@
     "prototype",
     "get",
     "dataset-aux",
+    "image-classification",
     "imagenet-aux"
   ],
   "variations": {
