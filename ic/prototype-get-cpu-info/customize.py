@@ -13,9 +13,9 @@ def preprocess(i):
 
 def postprocess(i):
 
-    state = i['state']
+    new_state = i['new_state']
 
-    env = i['env']
+    new_env = i['new_env']
 
     if not os.path.isfile(lscpu_out):
         return {'return':1, 'error':'{} was not generated'.format(lscpu_out)}
@@ -25,7 +25,7 @@ def postprocess(i):
 
     ss = r['string']
 
-    state['cpu_info_raw'] = ss
+    new_state['cpu_info_raw'] = ss
 
     print ('')
     for s in ss.split('\n'):

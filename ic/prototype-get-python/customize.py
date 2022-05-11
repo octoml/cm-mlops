@@ -43,7 +43,7 @@ def preprocess(i):
     python_bin = file_name
 
     new_env['CM_PYTHON_BIN']=python_bin
-    new_env['CM_PYTHON_BIN_WITH_PATH']=found_path
+    new_env['CM_PYTHON_BIN_WITH_PATH']=os.path.join(found_path, python_bin)
 
     if os.path.isfile('tmp-ver.out'):
         os.remove('tmp-ver.out')
