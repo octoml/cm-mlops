@@ -4,7 +4,19 @@
   "automation_uid": "972c28dafb2543fa",
   "deps": [
     {
-      "tags": "meta-package,python"
+      "tags": "detect,os"
+    },
+    {
+      "tags": "get,sys-utils-cm"
+    },
+    {
+      "tags": "echo-off"
+    },
+    {
+      "tags": "get,python"
+    },
+    {
+      "tags": "get,ml-model,image-classification,onnx"
     }
   ],
   "tags": [

@@ -9,8 +9,9 @@ def preprocess(i):
     new_env = i['new_env']
 
     # Test (not needed - will be removed)
-    if env.get('CM_SKIP_SYS_UTILS','') in [True, 'YES', 'yes', 'on', 'ON']:
-        return {'return':0, 'skip':True}
+    for env_to_check in [env, new_env]:
+        if env_to_check.get('CM_SKIP_SYS_UTILS','').lower() in [True, 'yes', 'on']:
+            return {'return':0, 'skip':True}
 
     # If windows, download here otherwise use run.sh
     if os_info['platform'] == 'windows':

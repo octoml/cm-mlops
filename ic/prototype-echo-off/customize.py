@@ -18,4 +18,8 @@ def preprocess(i):
         
         new_state['script_prefix'] = script_prefix
 
+    # Test to skip next dependency
+    #new_env = i['new_env']
+    #new_env['CM_SKIP_SYS_UTILS']='YES'
+
     return {'return':0}

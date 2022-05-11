@@ -1,0 +1,3 @@
+20220511:
+ * Added prototype of ic::prototype-get-ml-model-resnet50-onnx with variations
+

@@ -4,6 +4,15 @@
   "automation_uid": "972c28dafb2543fa",
   "deps": [
     {
+      "tags": "detect,os"
+    },
+    {
+      "tags": "get,sys-utils-cm"
+    },
+    {
+      "tags": "echo-off"
+    },
+    {
       "tags": "ck-framework"
     },
     {
