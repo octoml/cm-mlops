@@ -3,7 +3,7 @@
   "automation_alias": "ic",
   "automation_uid": "972c28dafb2543fa",
   "install":true,
-  "default_variations":["v2012"],
+  "default_variations":["2012"],
   "deps": [
     {
       "tags": "get,sys-utils-cm"
@@ -20,7 +20,7 @@
     "imagenet-aux"
   ],
   "variations": {
-    "v2012": {
+    "2012": {
       "new_env": {
         "CM_DATASET_AUX_VER": "2012"
       }

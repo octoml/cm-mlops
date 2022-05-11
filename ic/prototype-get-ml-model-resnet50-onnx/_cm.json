@@ -3,7 +3,7 @@
   "automation_alias": "ic",
   "automation_uid": "972c28dafb2543fa",
   "install":true,
-  "default_variations":["v1.5-opset-8"],
+  "default_variations":["1.5-opset-8"],
   "new_env": {
     "CM_ML_MODEL": "RESNET50"
   },
@@ -17,16 +17,16 @@
     "onnx"
   ],
   "variations": {
-    "v1.5-opset-8": {
+    "1.5-opset-8": {
       "env": {
         "CM_PACKAGE_URL": "https://zenodo.org/record/2592612/files/resnet50_v1.onnx"
       },
       "new_env": {
-        "CM_ML_MODEL_VER": "1",
+        "CM_ML_MODEL_VER": "1.5",
         "CM_ML_MODEL_ONNX_OPSET": "8"
       }
     },
-    "v1.5-opset-11": {
+    "1.5-opset-11": {
       "env": {
         "CM_PACKAGE_URL": "https://zenodo.org/record/4735647/files/resnet50_v1.onnx"
       },

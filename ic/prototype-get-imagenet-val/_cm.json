@@ -3,7 +3,7 @@
   "automation_alias": "ic",
   "automation_uid": "972c28dafb2543fa",
   "install":true,
-  "default_variations":["v2012-500"],
+  "default_variations":["2012-500"],
   "deps": [
     {
       "tags": "get,sys-utils-cm"
@@ -25,7 +25,7 @@
     "original"
   ],
   "variations": {
-    "v2012-500": {
+    "2012-500": {
       "new_env": {
         "CM_DATASET_VER": "2012",
         "CM_DATASET_SIZE": "500"
