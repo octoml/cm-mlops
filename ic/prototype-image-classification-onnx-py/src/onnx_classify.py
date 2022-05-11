@@ -67,7 +67,7 @@ def load_and_resize_image(image_filepath, height, width):
 def load_a_batch(batch_filenames):
     unconcatenated_batch_data = []
     for image_filename in batch_filenames:
-        image_filepath = imagenet_path + '/' + image_filename
+        image_filepath = image_filename
         nchw_data = load_and_resize_image( image_filepath, height, width )
         unconcatenated_batch_data.append( nchw_data )
     batch_data = np.concatenate(unconcatenated_batch_data, axis=0)
@@ -91,7 +91,7 @@ output_layer_names  = [ x.name for x in sess.get_outputs() ]    # FIXME: check t
 output_layer_name   = output_layer_name or output_layer_names[0]
 
 model_input_shape   = sess.get_inputs()[0].shape
-model_classes       = sess.get_outputs()[0].shape[1]
+model_classes       = sess.get_outputs()[1].shape[1]
 labels              = load_labels(labels_path)
 bg_class_offset     = model_classes-len(labels)  # 1 means the labels represent classes 1..1000 and the background class 0 has to be skipped
 
@@ -116,7 +116,11 @@ starting_index = 1
 
 for batch_idx in range(batch_count):
     print("Batch {}/{}:".format(batch_idx+1,batch_count))
-    batch_filenames = [ "ILSVRC2012_val_00000{:03d}.JPEG".format(starting_index + batch_idx*batch_size + i) for i in range(batch_size) ]
+    batch_filenames = [ imagenet_path + '/' + "ILSVRC2012_val_00000{:03d}.JPEG".format(starting_index + batch_idx*batch_size + i) for i in range(batch_size) ]
+
+    # Grigori: trick to test models:
+    if os.environ.get('CM_IMAGE','')!='':
+        batch_filenames=[os.environ['CM_IMAGE']]
 
     batch_data = load_a_batch( batch_filenames )
     #print(batch_data.shape)
@@ -128,6 +132,6 @@ for batch_idx in range(batch_count):
         top5_indices = list(reversed(softmax_vector.argsort()))[:5]
         print(batch_filenames[in_batch_idx] + ' :')
         for class_idx in top5_indices:
-            print("\t{}\t{}".format(softmax_vector[class_idx], labels[class_idx]))
+            print("\t{}\t{}\t{}".format(class_idx, softmax_vector[class_idx], labels[class_idx]))
         print("")
 

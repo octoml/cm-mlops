@@ -2,6 +2,12 @@
   "alias": "prototype-echo-hello-world",
   "automation_alias": "ic",
   "automation_uid": "972c28dafb2543fa",
+  "env":{
+    "CM_TEST1":"TEST1"
+  },
+  "new_env":{
+    "CM_TEST2":"TEST2"
+  },
   "deps": [
     {
       "tags": "echo-off"

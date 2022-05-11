@@ -12,9 +12,6 @@
       "tags": "echo-off"
     }
   ],
-  "env": {
-    "CM_CLEAN_DIRS": "data"
-  },
   "tags": [
     "prototype",
     "get",
@@ -24,9 +21,6 @@
   ],
   "variations": {
     "v2012": {
-      "env": {
-        "CM_PACKAGE_URL": "http://dl.caffe.berkeleyvision.org//caffe_ilsvrc12.tar.gz"
-      },
       "new_env": {
         "CM_DATASET_AUX_VER": "2012"
       }
