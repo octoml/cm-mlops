@@ -21,10 +21,9 @@
   ],
   "tags": [
     "prototype",
-    "image-classification",
+    "image-classification-ck",
     "onnx",
-    "python",
-    "ck"
+    "python"
   ],
   "uid": "fa2e8c14460d4d07"
 }
