@@ -1,0 +1,35 @@
+{
+  "alias": "prototype-get-imagenet-aux",
+  "automation_alias": "ic",
+  "automation_uid": "972c28dafb2543fa",
+  "install":true,
+  "default_variations":["v2012"],
+  "deps": [
+    {
+      "tags": "get,sys-utils-cm"
+    },
+    {
+      "tags": "echo-off"
+    }
+  ],
+  "env": {
+    "CM_CLEAN_DIRS": "data"
+  },
+  "tags": [
+    "prototype",
+    "get",
+    "dataset-aux",
+    "imagenet-aux"
+  ],
+  "variations": {
+    "v2012": {
+      "env": {
+        "CM_PACKAGE_URL": "http://dl.caffe.berkeleyvision.org//caffe_ilsvrc12.tar.gz"
+      },
+      "new_env": {
+        "CM_DATASET_AUX_VER": "2012"
+      }
+    }
+  },
+  "uid": "bb2c6dd8c8c64217"
+}
