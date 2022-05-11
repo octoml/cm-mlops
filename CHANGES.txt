@@ -2,6 +2,8 @@
  * Added prototype of ic::prototype-get-ml-model-resnet50-onnx with variations
  * Added prototype of ic::prototype-get-imagenet-val with variations
  * Added prototype of ic::prototype-get-imagenet-aux with variations
+ * Added prototype of ic::prototype-get-llvm
+ * Added prototype of ic::prototype-get-tvm
 
 
 

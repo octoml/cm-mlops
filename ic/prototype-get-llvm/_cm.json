@@ -1,0 +1,19 @@
+{
+  "alias": "prototype-get-llvm",
+  "auto_detect": true,
+  "automation_alias": "ic",
+  "automation_uid": "972c28dafb2543fa",
+  "deps": [
+    {
+      "tags": "echo-off"
+    }
+  ],
+  "install": true,
+  "tags": [
+    "prototype",
+    "get",
+    "llvm",
+    "get-llvm"
+  ],
+  "uid": "99832a103ed04eb8"
+}
