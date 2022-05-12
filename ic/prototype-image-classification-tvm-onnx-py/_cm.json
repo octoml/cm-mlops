@@ -1,0 +1,43 @@
+{
+  "alias": "prototype-image-classification-tvm-onnx-py",
+  "automation_alias": "ic",
+  "automation_uid": "972c28dafb2543fa",
+  "env": {
+     "CM_BATCH_SIZE":"1",
+     "CM_BATCH_COUNT":"1"
+  },
+  "deps": [
+    {
+      "tags": "detect,os"
+    },
+    {
+      "tags": "get,sys-utils-cm"
+    },
+    {
+      "tags": "echo-off"
+    },
+    {
+      "tags": "get,python"
+    },
+    {
+      "tags": "get,dataset,image-classification,original"
+    },
+    {
+      "tags": "get,tvm"
+    },
+    {
+      "tags": "get,dataset-aux,image-classification"
+    },
+    {
+      "tags": "get,ml-model,image-classification,onnx"
+    }
+  ],
+  "tags": [
+    "prototype",
+    "image-classification",
+    "onnx",
+    "tvm",
+    "python"
+  ],
+  "uid": "63080407db4d4ac4"
+}
