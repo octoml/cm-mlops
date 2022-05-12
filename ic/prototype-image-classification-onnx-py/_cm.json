@@ -20,7 +20,7 @@
       "tags": "get,python"
     },
     {
-      "tags": "get,dataset,image-classification"
+      "tags": "get,dataset,image-classification,original"
     },
     {
       "tags": "get,dataset-aux,image-classification"
