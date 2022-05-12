@@ -17,7 +17,7 @@ export CK_BATCH_COUNT=${CM_BATCH_COUNT}
 export USE_TVM=yes
 
 
-export PYTHONPATH=${CM_PYTHONPATH_LIST}
+#export PYTHONPATH=${CM_PYTHONPATH_LIST}
 wget -nc https://raw.githubusercontent.com/mlcommons/ck-mlops/main/program/ml-task-image-classification-tvm-onnx-cpu/synset.txt
 test $? -eq 0 || exit 1
 ${CM_PYTHON_BIN} -m pip install -r ${CM_CURRENT_IC_PATH}/requirements.txt
