@@ -22,5 +22,5 @@ wget -nc https://raw.githubusercontent.com/mlcommons/ck-mlops/main/program/ml-ta
 test $? -eq 0 || exit 1
 ${CM_PYTHON_BIN} -m pip install -r ${CM_CURRENT_IC_PATH}/requirements.txt
 test $? -eq 0 || exit 1
-python3.9 ${CM_CURRENT_IC_PATH}/src/classify.py --image ${CK_ENV_DATASET_IMAGENET_VAL}/ILSVRC2012_val_00000001.JPEG
+${CM_PYTHON_BIN} ${CM_CURRENT_IC_PATH}/src/classify.py --image ${CK_ENV_DATASET_IMAGENET_VAL}/ILSVRC2012_val_00000001.JPEG
 test $? -eq 0 || exit 1
