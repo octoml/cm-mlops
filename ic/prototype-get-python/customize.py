@@ -38,7 +38,7 @@ def preprocess(i):
     if os_info['platform'] == 'windows':
         paths_bin.append(path_bin+'\\Scripts')
 
-    new_env['CM_PATH_LIST'] = paths_bin
+    new_env['+PATH'] = paths_bin
 
     python_bin = file_name
 

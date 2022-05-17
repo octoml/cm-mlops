@@ -54,6 +54,6 @@ def preprocess(i):
             os.remove(filename)
 
         # Add to path
-        new_env['CM_PATH_LIST']=[os.path.join(path, 'bin')]
+        new_env['+PATH']=[os.path.join(path, 'bin')]
 
     return {'return':0}

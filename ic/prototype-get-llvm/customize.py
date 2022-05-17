@@ -35,7 +35,7 @@ def preprocess(i):
     path_bin = os.path.dirname(found_path)
     paths_bin.append(path_bin)
 
-    new_env['CM_PATH_LIST'] = paths_bin
+    new_env['+PATH'] = paths_bin
 
     clang_bin = file_name
 
