@@ -1,5 +1,5 @@
 {
-  "alias": "prototype-image-classification-onnx-py",
+  "alias": "prototype-image-classification-tvm-onnx-py",
   "automation_alias": "ic",
   "automation_uid": "972c28dafb2543fa",
   "env": {
@@ -23,6 +23,9 @@
       "tags": "get,dataset,image-classification,original"
     },
     {
+      "tags": "get,tvm"
+    },
+    {
       "tags": "get,dataset-aux,image-classification"
     },
     {
@@ -33,7 +36,8 @@
     "prototype",
     "image-classification",
     "onnx",
+    "tvm",
     "python"
   ],
-  "uid": "3d5e908e472b417e"
+  "uid": "63080407db4d4ac4"
 }

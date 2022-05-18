@@ -1,5 +1,5 @@
 {
-  "alias": "prototype-image-classification-onnx-py",
+  "alias": "prototype-image-classification-torch-py",
   "automation_alias": "ic",
   "automation_uid": "972c28dafb2543fa",
   "env": {
@@ -20,20 +20,20 @@
       "tags": "get,python"
     },
     {
-      "tags": "get,dataset,image-classification,original"
+      "tags": "get,dataset,preprocessed,image-classification"
     },
     {
       "tags": "get,dataset-aux,image-classification"
     },
     {
-      "tags": "get,ml-model,image-classification,onnx"
+      "tags": "get,imagenet-helper"
     }
   ],
   "tags": [
     "prototype",
     "image-classification",
-    "onnx",
+    "torch",
     "python"
   ],
-  "uid": "3d5e908e472b417e"
+  "uid": "e3986ae887b84ca8"
 }

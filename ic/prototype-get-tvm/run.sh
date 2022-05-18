@@ -8,7 +8,7 @@ cp cmake/config.cmake build
 
 cd build
 
-sed -i 's/set(USE_LLVM OFF)/set(USE_LLVM ON)/' config.cmake
+sed -i.bak 's/set(USE_LLVM OFF)/set(USE_LLVM ON)/' config.cmake
 
 cmake ..
 test $? -eq 0 || exit 1

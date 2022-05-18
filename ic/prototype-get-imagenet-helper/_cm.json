@@ -1,0 +1,19 @@
+{
+  "alias": "prototype-get-imagenet-helper",
+  "automation_alias": "ic",
+  "automation_uid": "972c28dafb2543fa",
+  "install":true,
+  "deps": [
+    {
+      "tags": "echo-off"
+    }
+  ],
+  "tags": [
+    "prototype",
+    "get",
+    "imagenet",
+    "helper",
+    "imagenet-helper"
+  ],
+  "uid": "a6c3c321d07742f9"
+}
