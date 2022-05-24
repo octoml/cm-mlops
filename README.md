@@ -36,14 +36,22 @@ Use CM to install this repository on your system:
 $ cm pull repo octoml@cm-mlops
 ```
 
-You can see this and other CM-compatible repositories installed on your system as follows:
+You can now list available intelligent components (IC) as follows:
 ```bash
-$ cm list repo
+$ cm list ic
 ```
+
+You can run any IC as follows:
+```bash
+$ cm run ic {IC name or UID}
+```
+
 
 ## Check tutorials
 
 Follow the [IC tutorial](https://cknowledge.org/docs/cm/tutorial-ic.html) to understand IC concepts.
+
+
 
 # Contacts
 
