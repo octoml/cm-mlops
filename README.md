@@ -1,7 +1,7 @@
 # CM repository to bridge MLOps and DevOps
 
-[![CM repository](https://img.shields.io/badge/Collective%20Mind-compatible-blue)](https://github.com/mlcommons/ck/tree/master/ck2)
-[![CM artifact](https://img.shields.io/badge/Artifact-automated%20and%20reusable-blue)](https://github.com/mlcommons/ck/tree/master/ck2)
+[![CM repository](https://img.shields.io/badge/Collective%20Mind-compatible-blue)](https://github.com/mlcommons/ck/tree/master/cm)
+[![CM artifact](https://img.shields.io/badge/Artifact-automated%20and%20reusable-blue)](https://github.com/mlcommons/ck/tree/master/cm)
 
 
 It is becoming very challenging to co-design, optimize and deploy efficient AI Systems in the real world:
@@ -12,7 +12,7 @@ suggests that it is possible to [apply DevOps principles to MLOps](https://www.d
 if we treat all AI, ML and Systems artifacts including models, data sets, frameworks, libraries and scripts as "code" meta packages 
 with dependencies on other artifacts, operating systems and hardware.
 
-We are prototyping [CM-based](https://github.com/mlcommons/ck/tree/master/ck2) 
+We are prototyping [CM-based](https://github.com/mlcommons/ck/tree/master/cm) 
 automations to convert ad-hoc scripts and artifacts into "intelligent components"
 that can modularize AI, ML and other complex applications and automatically
 adapt them to diverse and rapidly evolving software and hardware stacks.
@@ -26,7 +26,7 @@ of AI and ML Systems. across continuously changing software, hardware, models an
 
 ## Install CM toolkit and dependencies
 
-Install the CM toolkit as described [here](https://github.com/mlcommons/ck/blob/master/ck2/docs/installation.md).
+Install the CM toolkit as described [here](https://github.com/mlcommons/ck/blob/master/cm/docs/installation.md).
 
 ## Install this CM repository
 
