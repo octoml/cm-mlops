@@ -12,10 +12,13 @@ suggests that it is possible to [apply DevOps principles to MLOps](https://www.d
 if we treat all AI, ML and Systems artifacts including models, data sets, frameworks, libraries and scripts as "code" meta packages 
 with dependencies on other artifacts, operating systems and hardware.
 
-We are prototyping [CM-based components](https://github.com/mlcommons/ck/tree/master/ck2) 
-to bridge the gap between MLOps and DevOps, modularize complex computational systems, 
-and enable collaborative, deterministic and reproducible co-design, benchmarking, optimization and deployment 
-of ML Systems across very diverse and continuously changing software and hardware stacks.
+We are prototyping [CM-based](https://github.com/mlcommons/ck/tree/master/ck2) 
+automations to convert ad-hoc scripts and artifacts into "intelligent components"
+that can modularize AI, ML and other complex applications and automatically
+adapt them to diverse and rapidly evolving software and hardware stacks.
+
+For example, we use IC to enable collaborative, deterministic and reproducible benchmarking, co-design, optimization and deployment 
+of AI and ML Systems. across continuously changing software, hardware, models and data sets.
 
 
 
@@ -38,5 +41,13 @@ You can see this and other CM-compatible repositories installed on your system a
 $ cm list repo
 ```
 
+## Check tutorials
 
-*More to come soon ...*
+Follow the [IC tutorial](https://cknowledge.org/docs/cm/tutorial-ic.html) to understand IC concepts.
+
+# Contacts
+
+* [Grigori Fursin](https://cKnowledge.io/@gfursin)
+* [Arjun Suresh](https://www.linkedin.com/in/arjunsuresh)
+
+
