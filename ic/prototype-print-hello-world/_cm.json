@@ -1,24 +1,26 @@
 {
-  "alias": "prototype-echo-hello-world",
+  "alias": "prototype-print-hello-world",
   "automation_alias": "ic",
   "automation_uid": "972c28dafb2543fa",
-  "env":{
-    "CM_TEST1":"TEST1"
-  },
-  "new_env":{
-    "CM_TEST2":"TEST2"
-  },
   "deps": [
     {
-      "tags": "echo-off"
+      "tags": "win,echo-off"
     }
   ],
+  "env": {
+    "CM_ENV_TEST1": "TEST1"
+  },
+  "new_env": {
+    "CM_ENV_TEST2": "TEST2"
+  },
   "tags": [
     "prototype",
+    "print",
     "hello-world",
+    "hello world",
     "hello",
     "world",
-    "bash"
+    "script"
   ],
   "uid": "b9f0acba4aca4baa"
 }

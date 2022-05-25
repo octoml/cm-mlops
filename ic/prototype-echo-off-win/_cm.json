@@ -1,11 +1,12 @@
 {
-  "alias": "prototype-echo-off",
+  "alias": "prototype-echo-off-win",
   "automation_alias": "ic",
   "automation_uid": "972c28dafb2543fa",
   "tags": [
     "prototype",
     "echo",
     "off",
+    "win",
     "echo-off"
   ],
   "uid": "49d94b57524f4fcf"
