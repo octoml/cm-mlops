@@ -5,12 +5,12 @@ echo "CM_HOST_OS_TEST=$pwd" > tmp-run-env.out
 if test -f "/etc/os-release"; then
    echo "CM_HOST_OS_FLAVOR=`cat /etc/os-release | grep '^ID=' | cut -d'=' -f2 `" >> tmp-run-env.out
    echo "CM_HOST_OS_FLAVOR_LIKE=`cat /etc/os-release | grep '^ID_LIKE=' | cut -d'=' -f2`" >> tmp-run-env.out
-   echo "CM_HOST_OS_VERSION=`cat /etc/os-release | grep '^VERSION_ID=' | cut -d'=' -f2`" >> tmp-run-env.out
-   echo "CM_HOST_OS_KERNEL_VER=`uname -r`" >> tmp-run-env.out
+   echo "CM_HOST_OS_VERSION=`cat /etc/os-release | grep '^VERSION_ID=' | cut -d'=' -f2 | cut -d'"' -f2`" >> tmp-run-env.out
+   echo "CM_HOST_OS_KERNEL_VERSION=`uname -r`" >> tmp-run-env.out
    echo "CM_HOST_PLATFORM_FLAVOR=`uname -m`" >> tmp-run-env.out
 else
    echo "CM_HOST_OS_FLAVOR=`sw_vers | grep '^ProductName:' | cut -f2 `" >> tmp-run-env.out
    echo "CM_HOST_OS_VERSION=`sw_vers | grep '^ProductVersion:' | cut -f2`" >> tmp-run-env.out
-   echo "CM_HOST_OS_KERNEL_VER=`uname -r`" >> tmp-run-env.out
+   echo "CM_HOST_OS_KERNEL_VERSION=`uname -r`" >> tmp-run-env.out
    echo "CM_HOST_PLATFORM_FLAVOR=`uname -m `" >> tmp-run-env.out
 fi

@@ -8,6 +8,11 @@
     "CM_SUDO": "sudo"
   },
   "install":true,
+  "deps": [
+    {
+      "tags": "detect,os"
+    }
+  ],
   "tags": [
     "prototype",
     "get",
