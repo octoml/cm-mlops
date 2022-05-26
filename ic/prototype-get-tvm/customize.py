@@ -7,6 +7,6 @@ def postprocess(i):
 
     tvm_home = new_env['TVM_HOME']
 
-    new_env['CM_PYTHONPATH_LIST'] = [os.path.join(tvm_home,'python')]
+    new_env['+PYTHONPATH'] = [os.path.join(tvm_home,'python')]
 
     return {'return':0}
