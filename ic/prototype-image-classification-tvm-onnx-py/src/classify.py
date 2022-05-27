@@ -143,6 +143,7 @@ def run_case(dtype, image, target):
         build_conf = {'relay.backend.use_auto_scheduler': False}
         opt_lvl = int(os.environ.get('TVM_OPT_LEVEL', 3))
         host = os.environ.get('CM_HOST_PLATFORM_FLAVOR')
+
         if host == 'x86_64':
             target = os.environ.get('TVM_TARGET', 'llvm -mcpu=znver2')
         else:

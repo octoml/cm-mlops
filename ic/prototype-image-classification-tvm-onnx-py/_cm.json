@@ -11,6 +11,9 @@
       "tags": "detect,os"
     },
     {
+      "tags": "get,cpu-info"
+    },
+    {
       "tags": "get,sys-utils-cm"
     },
     {

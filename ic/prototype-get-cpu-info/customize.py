@@ -34,5 +34,5 @@ def postprocess(i):
             v = s.split(':')
             key = v[0]
             if key in vkeys:
-                new_env['CM_CPUINFO_'+key] = v[1].strip()
+                new_env['CM_CPUINFO_'+key.replace(" ","_").replace('(','').replace(')','').replace('-','_')] = v[1].strip()
     return {'return':0}
