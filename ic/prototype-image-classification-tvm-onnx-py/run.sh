@@ -4,6 +4,11 @@
 #echo ${CM_ML_MODEL_FILE_WITH_PATH}
 
 CM_CURRENT_IC_PATH=${CM_CURRENT_IC_PATH:-$PWD}
+if [[ ${CM_HOST_PLATFORM_FLAVOR} == "arm64" ]]; then
+    ${CM_PYTHON_BIN} -m pip install -i https://test.pypi.org/simple/ onnxruntime==1.9.0.dev174552
+else
+    ${CM_PYTHON_BIN} -m pip install onnxruntime
+fi
 
 # connect CM intelligent components with CK env
 export CK_ENV_ONNX_MODEL_ONNX_FILEPATH=${CM_ML_MODEL_FILE_WITH_PATH}
@@ -17,7 +22,6 @@ export CK_BATCH_COUNT=${CM_BATCH_COUNT}
 export USE_TVM=yes
 
 
-#export PYTHONPATH=${CM_PYTHONPATH_LIST}
 wget -nc https://raw.githubusercontent.com/mlcommons/ck-mlops/main/program/ml-task-image-classification-tvm-onnx-cpu/synset.txt
 test $? -eq 0 || exit 1
 ${CM_PYTHON_BIN} -m pip install -r ${CM_CURRENT_IC_PATH}/requirements.txt
