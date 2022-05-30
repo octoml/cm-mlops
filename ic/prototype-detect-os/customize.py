@@ -30,16 +30,17 @@ def postprocess(i):
 
     new_env = i['new_env']
 
-    r = utils.load_txt(file_name='tmp-run.out',
-                       check_if_exists = True,
-                       split = True)
-    if r['return']>0: return r
+    if os.path.isfile('tmp-run.out'):
+        r = utils.load_txt(file_name='tmp-run.out',
+                           check_if_exists = True,
+                           split = True)
+        if r['return']>0: return r
 
-    s = r['list']
+        s = r['list']
 
-    new_state['os_uname_machine']=s[0]
-    new_state['os_uname_all']=s[1]
+        new_state['os_uname_machine']=s[0]
+        new_state['os_uname_all']=s[1]
 
-    new_env['CM_HOST_OS_MACHINE']=new_state['os_uname_machine']
+        new_env['CM_HOST_OS_MACHINE']=new_state['os_uname_machine']
 
     return {'return':0}
