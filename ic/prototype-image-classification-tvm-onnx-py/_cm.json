@@ -39,7 +39,6 @@
     "prototype",
     "app",
     "image-classification",
-    "onnx",
     "tvm-onnx",
     "python"
   ],
