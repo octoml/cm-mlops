@@ -40,7 +40,7 @@
     "app",
     "image-classification",
     "onnx",
-    "tvm",
+    "tvm-onnx",
     "python"
   ],
   "uid": "63080407db4d4ac4"
