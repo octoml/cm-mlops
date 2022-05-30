@@ -5,7 +5,7 @@
   "env": {
     "CM_SUDO": "sudo"
   },
-  "install":true,
+  "install": true,
   "tags": [
     "prototype",
     "set",

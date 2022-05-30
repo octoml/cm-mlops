@@ -21,6 +21,7 @@
   ],
   "tags": [
     "prototype",
+    "app",
     "image-classification-ck",
     "onnx",
     "python"
