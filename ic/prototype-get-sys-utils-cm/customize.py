@@ -56,4 +56,11 @@ def preprocess(i):
         # Add to path
         new_env['+PATH']=[os.path.join(path, 'bin')]
 
+    else:
+        print ('')
+        print ('*******************************************************************')
+        print ('This IC will attempt to install minimal system dependencies for CM.')
+        print ('Note that you may be asked for your SUDO password ...')
+        print ('*******************************************************************')
+
     return {'return':0}

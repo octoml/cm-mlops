@@ -1,3 +1,5 @@
+echo ""
+
 CM_APT_TOOL=${CM_APT_TOOL:-apt}
 
 ${CM_SUDO} ${CM_APT_TOOL} update && \

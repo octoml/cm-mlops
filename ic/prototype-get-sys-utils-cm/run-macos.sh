@@ -1,3 +1,5 @@
+echo ""
+
 brew update && \
      brew install \
            git \
