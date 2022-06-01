@@ -1,5 +1,4 @@
 IF NOT DEFINED CM_LLVM_CLANG_BIN SET CM_LLVM_CLANG_BIN=clang.exe
 
-echo %CM_LLVM_CLANG_BIN_WITH_PATH%
 %CM_LLVM_CLANG_BIN% --version > tmp-ver.out
 

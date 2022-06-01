@@ -1,6 +1,5 @@
 {
-  "alias": "prototype-get-llvm",
-  "auto_detect": true,
+  "alias": "prototype-get-llvm-any",
   "automation_alias": "ic",
   "automation_uid": "972c28dafb2543fa",
   "deps": [
@@ -12,8 +11,10 @@
   "tags": [
     "prototype",
     "get",
+    "any",
     "llvm",
-    "get-llvm"
+    "any-llvm",
+    "get-any-llvm"
   ],
   "uid": "99832a103ed04eb8"
 }

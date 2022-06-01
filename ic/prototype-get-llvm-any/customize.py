@@ -5,9 +5,10 @@ def preprocess(i):
 
     os_info = i['os_info']
 
+    env = i['env']
     new_env = i['new_env']
 
-    env_path = os.environ.get('PATH','')
+    recursion_spaces = i['recursion_spaces']
 
     # If windows, download here otherwise use run.sh
     if os_info['platform'] == 'windows':
@@ -15,8 +16,22 @@ def preprocess(i):
     else:
         file_name = 'clang'
 
+    # Check paths to search
+    path = env.get('CM_PATH','')
+
+    default_path = False
+
+    default_path_list = os.environ.get('PATH','').split(os_info['env_separator'])
+
+    if path == '':
+        path_list = default_path_list
+        default_path = True
+    else:
+        print (recursion_spaces + '    # Requested path: {}'.format(path))
+        path_list = path.split(os_info['env_separator'])
+
     # Prepare paths to search
-    r = i['automation'].find_file_in_paths({'paths':env_path.split(os_info['env_separator']), 
+    r = i['automation'].find_file_in_paths({'paths':path_list,
                                            'file_name':file_name, 
                                            'select':True,
                                            'recursion_spaces':i['recursion_spaces']})
@@ -25,22 +40,21 @@ def preprocess(i):
     found_paths = r['found_paths']
 
     if len(found_paths)==0:
-        return {'return':16, 'error':'component not detected'}
+        return {'return':16, 'error':'{} not found'.format(file_name)}
 
     # Prepare env
     found_path = found_paths[0]
 
-    paths_bin = []
+    path_bin = found_path
 
-    path_bin = os.path.dirname(found_path)
-    paths_bin.append(path_bin)
+    if path_bin not in default_path_list:
+        new_env['+PATH'] = [path_bin]
 
-    new_env['+PATH'] = paths_bin
+    full_path = os.path.join(found_path, file_name)
+    print (recursion_spaces + '    # Found component: {}'.format(full_path))
 
-    clang_bin = file_name
-
-    new_env['CM_LLVM_CLANG_BIN']=clang_bin
-    new_env['CM_LLVM_CLANG_BIN_WITH_PATH']=os.path.join(found_path, clang_bin)
+    new_env['CM_LLVM_CLANG_BIN'] = file_name
+    new_env['CM_LLVM_CLANG_BIN_WITH_PATH'] = full_path
 
     if os.path.isfile('tmp-ver.out'):
         os.remove('tmp-ver.out')
@@ -65,4 +79,4 @@ def postprocess(i):
 
     new_env['CM_LLVM_CLANG_VERSION'] = version
 
-    return {'return':0}
+    return {'return':0, 'version':version}

@@ -1,0 +1,30 @@
+{
+  "alias": "prototype-get-llvm-prebuilt",
+  "automation_alias": "ic",
+  "automation_uid": "972c28dafb2543fa",
+  "default_version": "12.0.0",
+  "deps": [
+    {
+      "tags": "echo-off"
+    },
+    {
+      "tags": "detect,os"
+    }
+  ],
+  "install": true,
+  "post_deps": [
+    {
+      "tags": "get,any,llvm",
+      "take_version_from_env": true
+    }
+  ],
+  "tags": [
+    "prototype",
+    "get",
+    "prebuilt",
+    "llvm",
+    "prebuilt-llvm",
+    "get-prebuilt-llvm"
+  ],
+  "uid": "cda9094971724a0a"
+}
