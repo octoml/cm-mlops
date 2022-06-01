@@ -10,6 +10,9 @@
   "install":true,
   "deps": [
     {
+      "tags": "echo-off"
+    },
+    {
       "tags": "detect,os"
     }
   ],
