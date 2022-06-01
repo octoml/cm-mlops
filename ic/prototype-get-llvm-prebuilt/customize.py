@@ -16,16 +16,18 @@ def preprocess(i):
 
     print (recursion_spaces + '    # Requested version: {}'.format(need_version))
 
-    # Prepare package name
     host_os_bits = new_env['CM_HOST_OS_BITS']
-    host_os_machine = new_env['CM_HOST_OS_MACHINE'] # ABI
 
+    if os_info['platform'] != 'windows':
+        host_os_machine = new_env['CM_HOST_OS_MACHINE'] # ABI
+
+    # Prepare package name
     if os_info['platform'] == 'darwin':
         package_name = 'clang+llvm-' + need_version + '-x86_64-apple-darwin.tar.xz'
 
     elif os_info['platform'] == 'windows':
-        package_name = 'LLVM-' + need_version + '-win'
-
+        package_name = 'LLVM-' + need_version + '-win' + host_os_bits + '.exe'
+    
     else:
        if host_os_machine.startswith('arm') or host_os_machine.startswith('aarch'):
           if host_os_bits=='64':
