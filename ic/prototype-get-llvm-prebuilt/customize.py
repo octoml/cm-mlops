@@ -27,7 +27,14 @@ def preprocess(i):
 
     elif os_info['platform'] == 'windows':
         package_name = 'LLVM-' + need_version + '-win' + host_os_bits + '.exe'
-    
+
+        print('')
+        print('WARNING: Please copy the following path and then paste it when LLVM will ask you about installation path!')
+        print('')
+        print(os.getcwd())
+        print('')
+        input('Press Enter to continue!')
+
     else:
        if host_os_machine.startswith('arm') or host_os_machine.startswith('aarch'):
           if host_os_bits=='64':

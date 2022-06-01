@@ -1,1 +1,3 @@
-echo %CM_LLVM_PACKAGE%
+echo Running %CM_LLVM_PACKAGE% ...
+
+%CM_LLVM_PACKAGE% --help
