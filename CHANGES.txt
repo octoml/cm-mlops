@@ -1,3 +1,6 @@
+20220601:
+ * Updating mechanisms to install and/or detect LLVM
+
 20220525:
  * Fixing basic IC to print hello world
 
