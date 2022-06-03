@@ -1,8 +1,9 @@
 {
-  "alias": "prototype-detect-llvm",
+  "alias": "prototype-get-llvm",
   "automation_alias": "script",
   "automation_uid": "5b4e0237da074764",
-  "clean_files": ["tmp-ver.out"],
+  "clean_files": [
+  ],
   "deps": [
     {
       "tags": "set,echo-off,win"
@@ -11,9 +12,9 @@
   "install": true,
   "tags": [
     "prototype",
-    "detect",
+    "get",
     "llvm",
-    "detect-llvm"
+    "get-llvm"
   ],
   "uid": "99832a103ed04eb8"
 }

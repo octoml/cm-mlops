@@ -18,9 +18,6 @@ def preprocess(i):
 
     new_state['os_info']=os_info
 
-    if os.path.isfile('tmp-run-env.out'):
-        os.remove('tmp-run-env.out')
-
     return {'return':0}
 
 
@@ -35,7 +32,7 @@ def postprocess(i):
     if os_info['platform'] == 'windows':
         print ('Windows: TBD')
 
-    elif os.path.isfile('tmp-run.out'):
+    else:
         r = utils.load_txt(file_name='tmp-run.out',
                            check_if_exists = True,
                            split = True)

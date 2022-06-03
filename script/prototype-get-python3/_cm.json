@@ -1,8 +1,9 @@
 {
-  "alias": "prototype-detect-python3",
+  "alias": "prototype-get-python3",
   "automation_alias": "script",
   "automation_uid": "5b4e0237da074764",
-  "clean_files": ["tmp-ver.out"],
+  "clean_files": [
+  ],
   "deps": [
     {
       "tags": "set,echo-off,win"
@@ -11,11 +12,11 @@
   "install": true,
   "tags": [
     "prototype",
-    "detect",
+    "get",
     "python",
     "python3",
-    "detect-python",
-    "detect-python3"
+    "get-python",
+    "get-python3"
   ],
   "uid": "d0b5dd74373f4a62"
 }

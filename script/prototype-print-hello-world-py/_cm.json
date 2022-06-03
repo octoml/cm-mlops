@@ -13,7 +13,7 @@
       "tags": "install,sys-utils-cm"
     },
     {
-      "tags": "detect,python"
+      "tags": "get,python"
     },
     {
       "tags": "print,python-version"

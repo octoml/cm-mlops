@@ -7,7 +7,7 @@
       "tags": "set,echo-off,win"
     },
     {
-      "tags": "detect,python"
+      "tags": "get,python"
     }
   ],
   "tags": [

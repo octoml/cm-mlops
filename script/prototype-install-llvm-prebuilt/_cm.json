@@ -14,7 +14,7 @@
   "install": true,
   "post_deps": [
     {
-      "tags": "detect,llvm",
+      "tags": "get,llvm",
       "take_version_from_env": true
     }
   ],

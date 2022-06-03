@@ -10,7 +10,7 @@
       "tags": "install,sys-utils-cm"
     },
     {
-      "tags": "detect,python"
+      "tags": "get,python"
     },
     {
       "tags": "install,dataset,image-classification,original"
