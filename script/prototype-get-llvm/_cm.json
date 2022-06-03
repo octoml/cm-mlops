@@ -14,6 +14,9 @@
     "prototype",
     "get",
     "llvm",
+    "compiler",
+    "c-compiler",
+    "cpp-compiler",
     "get-llvm"
   ],
   "uid": "99832a103ed04eb8"

@@ -7,6 +7,8 @@ def preprocess(i):
 
     new_env = i['new_env']
 
+    recursion_spaces = i['recursion_spaces']
+
     file_name = 'clang.exe' if os_info['platform'] == 'windows' else 'clang'
 
     r = i['automation'].find_artifact({'file_name': file_name,
@@ -14,8 +16,15 @@ def preprocess(i):
                                        'new_env':i['new_env'],
                                        'os_info':os_info,
                                        'default_path_env_key': 'PATH',
-                                       'recursion_spaces':i['recursion_spaces']})
-    if r['return'] >0 : return r
+                                       'recursion_spaces':recursion_spaces})
+    if r['return'] >0 : 
+       if r['return'] == 16:
+           print (recursion_spaces+'    # {}'.format(r['error']))
+
+           # Attempt to run installer
+           r = {'return':0, 'skip':True, 'deps':[{'tags':'install,prebuilt,llvm'}]}
+
+       return r
 
     found_path = r['found_path']
 
@@ -30,6 +39,13 @@ def preprocess(i):
 
     new_env['CM_LLVM_CLANG_BIN']=file_name
     new_env['CM_LLVM_CLANG_BIN_WITH_PATH']=os.path.join(found_path, file_name)
+
+    # General compiler for general program compilation
+    new_env['CM_C_COMPILER_BIN']=file_name
+    new_env['CM_C_COMPILER_WITH_PATH']=os.path.join(found_path, file_name)
+
+    new_env['CM_CPP_COMPILER_BIN']=file_name
+    new_env['CM_CPP_COMPILER_WITH_PATH']=os.path.join(found_path, file_name)
 
     return {'return':0}
 

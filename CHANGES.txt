@@ -1,4 +1,6 @@
 20220603:
+ * Improved LLVM detection and installation
+ * Added example of image corner detection
  * Added updated script entries
 
 20220601:
