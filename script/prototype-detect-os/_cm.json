@@ -1,0 +1,13 @@
+{
+  "alias": "prototype-detect-os",
+  "automation_alias": "script",
+  "automation_uid": "5b4e0237da074764",
+  "tags": [
+    "prototype",
+    "detect-os",
+    "detect",
+    "os",
+    "info"
+  ],
+  "uid": "863735b7db8c44fc"
+}

@@ -1,0 +1,32 @@
+{
+  "alias": "prototype-print-hello-world-py",
+  "automation_alias": "script",
+  "automation_uid": "5b4e0237da074764",
+  "deps": [
+    {
+      "tags": "set,echo-off,win"
+    },
+    {
+      "tags": "detect,os,info"
+    },
+    {
+      "tags": "install,sys-utils-cm"
+    },
+    {
+      "tags": "detect,python"
+    },
+    {
+      "tags": "print,python-version"
+    }
+  ],
+  "tags": [
+    "prototype",
+    "print",
+    "hello world",
+    "hello-world",
+    "hello",
+    "world",
+    "python"
+  ],
+  "uid": "d83274c7eb754d90"
+}

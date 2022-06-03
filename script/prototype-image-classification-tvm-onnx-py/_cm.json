@@ -1,0 +1,46 @@
+{
+  "alias": "prototype-image-classification-tvm-onnx-py",
+  "automation_alias": "script",
+  "automation_uid": "5b4e0237da074764",
+  "env": {
+     "CM_BATCH_SIZE":"1",
+     "CM_BATCH_COUNT":"1"
+  },
+  "deps": [
+    {
+      "tags": "set,echo-off,win"
+    },
+    {
+      "tags": "detect,os,info"
+    },
+    {
+      "tags": "detect,cpu,info"
+    },
+    {
+      "tags": "install,sys-utils-cm"
+    },
+    {
+      "tags": "detect,python"
+    },
+    {
+      "tags": "install,dataset,image-classification,original"
+    },
+    {
+      "tags": "install,tvm"
+    },
+    {
+      "tags": "install,dataset-aux,image-classification"
+    },
+    {
+      "tags": "install,ml-model,image-classification,onnx"
+    }
+  ],
+  "tags": [
+    "prototype",
+    "app",
+    "image-classification",
+    "tvm-onnx",
+    "python"
+  ],
+  "uid": "63080407db4d4ac4"
+}

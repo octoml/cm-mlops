@@ -1,0 +1,4 @@
+IF NOT DEFINED CM_LLVM_CLANG_BIN SET CM_LLVM_CLANG_BIN=clang.exe
+
+%CM_LLVM_CLANG_BIN% --version > tmp-ver.out
+
