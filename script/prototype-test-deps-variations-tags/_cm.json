@@ -1,0 +1,49 @@
+{
+  "alias": "prototype-test-deps-variations-tags",
+  "automation_alias": "script",
+  "automation_uid": "5b4e0237da074764",
+
+  "default_variations": [
+    "1.5-opset-8"
+  ],
+  "install": true,
+  "new_env": {
+    "CM_ML_MODEL": "RESNET50"
+  },
+  "tags": [
+    "prototype",
+    "test",
+    "deps-variations-tags"
+  ],
+
+  "uid": "8733584cbbf146fa",
+  
+  "variations": {
+    "1.5-opset-11": {
+      "env": {
+        "CM_PACKAGE_URL": "https://zenodo.org/record/4735647/files/resnet50_v1.onnx"
+      },
+      "new_env": {
+        "CM_ML_MODEL_ONNX_OPSET": "11",
+        "CM_ML_MODEL_VER": "1.5"
+      },
+      "deps": [
+        {"tags":"print,hello-world",
+         "names":["print-hello-world"]}
+      ],
+      "add_deps_tags": {
+        "print-hello-world":"script"
+      }
+    },
+    "1.5-opset-8": {
+      "env": {
+        "CM_PACKAGE_URL": "https://zenodo.org/record/2592612/files/resnet50_v1.onnx"
+      },
+      "new_env": {
+        "CM_ML_MODEL_ONNX_OPSET": "8",
+        "CM_ML_MODEL_VER": "1.5"
+      }
+    }
+  }
+}
+
