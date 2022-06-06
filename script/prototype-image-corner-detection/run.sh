@@ -1,11 +1,26 @@
 #!/bin/bash
 
-CM_CURRENT_SCRIPT_PATH=${CM_CURRENT_SCRIPT_PATH:-$PWD}
+# Compile
 
-pushd ${CM_CURRENT_SCRIPT_PATH}
+echo ""
+echo "Compiling program ..."
+echo ""
 
-${CM_C_COMPILER_WITH_PATH} -lm susan.c
+cd ${CM_CURRENT_SCRIPT_PATH}
 
-./a.out data.pgm data_edges.pgm -c
+${CM_C_COMPILER_WITH_PATH} -O3 -lm susan.c
+test $? -eq 0 || exit 1
 
-popd
+# Return to the original path obtained in CM
+
+echo ""
+echo "Running program ..."
+echo ""
+
+cd ${CM_CURRENT_PATH}
+
+CM_INPUT=${CM_INPUT:-${CM_CURRENT_SCRIPT_PATH}/data.pgm}
+CM_OUTPUT=${CM_OUTPUT:-output_image_with_edges.pgm}
+
+${CM_CURRENT_SCRIPT_PATH}/a.out ${CM_INPUT} ${CM_OUTPUT} -c
+test $? -eq 0 || exit 1
