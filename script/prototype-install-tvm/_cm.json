@@ -17,5 +17,17 @@
     "tvm",
     "get-tvm"
   ],
-  "uid": "93c89140e6224f4b"
+  "uid": "93c89140e6224f4b",
+  "variations": {
+    "llvm": {
+      "env": {
+	"CM_TVM_USE_LLVM": "yes"
+      }
+    },
+    "openmp": {
+      "env": {
+	"CM_TVM_USE_OPENMP": "yes"
+      }
+    }
+  }
 }
