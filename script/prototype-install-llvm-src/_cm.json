@@ -14,7 +14,7 @@
   "env": {
     "CM_GIT_URL": "https://github.com/llvm/llvm-project"
   },
-  "install": false,
+  "install": true,
   "post_deps": [
     {
       "tags": "get,llvm",
