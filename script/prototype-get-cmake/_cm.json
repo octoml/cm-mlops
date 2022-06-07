@@ -7,7 +7,7 @@
       "tags": "set,echo-off,win"
     }
   ],
-  "install": false,
+  "install": true,
   "tags": [
     "prototype",
     "get",

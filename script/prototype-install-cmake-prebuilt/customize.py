@@ -86,9 +86,9 @@ def preprocess(i):
 
         path_bin = os.path.join(os.getcwd(), 'bin')
     elif os_info['platform'] == 'darwin':
-        path_bin = os.path.join(os.getcwd(), 'prebuilt', 'CMake.app', 'Contents', 'bin')
+        path_bin = os.path.join(os.getcwd(), 'CMake.app', 'Contents', 'bin')
     else:
-        path_bin = os.path.join(os.getcwd(), 'prebuilt', 'bin')
+        path_bin = os.path.join(os.getcwd(), 'bin')
 
     new_env['CM_CMAKE_PACKAGE'] = filename
     new_env['CM_PATH'] = path_bin

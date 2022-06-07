@@ -19,17 +19,18 @@ echo "******************************************************"
 
 cd build
 
-cmake \
-    -DLLVM_ENABLE_PROJECTS=clang \
-    -DCMAKE_INSTALL_PREFIX="${INSTALL_DIR}" \
-    -DCMAKE_BUILD_TYPE=Release \
-    -DLLVM_ENABLE_RTTI=ON \
-    -DLLVM_INSTALL_UTILS=ON \
-    ../llvm/llvm
-if [ "${?}" != "0" ]; then exit 1; fi
+#cmake \
+#    -DLLVM_ENABLE_PROJECTS=clang \
+#    -DCMAKE_INSTALL_PREFIX="${INSTALL_DIR}" \
+#    -DCMAKE_BUILD_TYPE=Release \
+#    -DLLVM_ENABLE_RTTI=ON \
+#    -DLLVM_INSTALL_UTILS=ON \
+#    ../llvm/llvm
+#if [ "${?}" != "0" ]; then exit 1; fi
 
 echo "******************************************************"
-CM_MAKE_CORES=${CM_HOST_CPU_NUMBER_OF_PROCESSORS:-2}
+CM_MAKE_CORES=${CM_MAKE_CORES:-${CM_HOST_CPU_NUMBER_OF_PROCESSORS}}
+CM_MAKE_CORES=${CM_MAKE_CORES:-2}
 
 cmake --build . --target install -j${CM_MAKE_CORES}
 if [ "${?}" != "0" ]; then exit 1; fi

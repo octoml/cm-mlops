@@ -21,8 +21,6 @@ def preprocess(i):
 
     print (recursion_spaces + '    # Requested version: {}'.format(need_version))
 
-
-
     new_env['CM_GIT_CHECKOUT'] = 'llvmorg-' + need_version
 
     new_env['CM_PATH'] = os.path.join(os.getcwd(), 'install', 'bin')
