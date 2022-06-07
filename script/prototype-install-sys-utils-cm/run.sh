@@ -1,6 +1,11 @@
 #!/bin/bash
 
-echo ""
+echo "************************************************"
+echo "Installing some system dependencies via sudo apt"
+echo "Enter skip to skip this step or press enter to continue:"
+read DUMMY
+
+if [[ "$DUMMY" == "skip" ]]; then exit 0; fi
 
 CM_APT_TOOL=${CM_APT_TOOL:-apt}
 
