@@ -17,7 +17,7 @@ export ML_MODEL_DATA_LAYOUT="NCHW"
 export CK_BATCH_SIZE=${CM_BATCH_SIZE}
 export CK_BATCH_COUNT=${CM_BATCH_COUNT}
 
-if [ "${CM_INPUT}" != "" ]; then export CM_IMAGE=${CM_INPUT}; fi
+if [[ "${CM_INPUT}" != "" ]]; then export CM_IMAGE=${CM_INPUT}; fi
 
 if [[ "x${CM_INPUT}" == "x" ]]; then
     sed -i.bak 's/set(USE_LLVM OFF)/set(USE_LLVM ON)/' config.cmake
