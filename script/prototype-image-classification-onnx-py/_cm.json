@@ -26,7 +26,7 @@
       "tags": "install,dataset-aux,image-classification"
     },
     {
-      "tags": "install,ml-model,image-classification,onnx"
+      "tags": "install,ml-model-onnx,image-classification"
     }
   ],
   "tags": [
