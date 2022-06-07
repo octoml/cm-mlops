@@ -19,10 +19,6 @@ export CK_BATCH_COUNT=${CM_BATCH_COUNT}
 
 if [[ "${CM_INPUT}" != "" ]]; then export CM_IMAGE=${CM_INPUT}; fi
 
-if [[ "x${CM_INPUT}" == "x" ]]; then
-    sed -i.bak 's/set(USE_LLVM OFF)/set(USE_LLVM ON)/' config.cmake
-fi
-
 ${CM_PYTHON_BIN} -m pip install -r ${CM_CURRENT_SCRIPT_PATH}/requirements.txt
 test $? -eq 0 || exit 1
 
