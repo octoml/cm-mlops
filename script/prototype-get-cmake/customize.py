@@ -22,7 +22,7 @@ def preprocess(i):
            print (recursion_spaces+'    # {}'.format(r['error']))
 
            # Attempt to run installer
-           r = {'return':0, 'skip':True, 'deps':[{'tags':'install,prebuilt,llvm'}]}
+           r = {'return':0, 'skip':True, 'deps':[{'tags':'install,prebuilt,cmake'}]}
 
        return r
 
