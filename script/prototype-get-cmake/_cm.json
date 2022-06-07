@@ -1,0 +1,18 @@
+{
+  "alias": "prototype-get-cmake",
+  "automation_alias": "script",
+  "automation_uid": "5b4e0237da074764",
+  "deps": [
+    {
+      "tags": "set,echo-off,win"
+    }
+  ],
+  "install": false,
+  "tags": [
+    "prototype",
+    "get",
+    "cmake",
+    "get-cmake"
+  ],
+  "uid": "52bf974d791b4fc8"
+}

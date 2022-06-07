@@ -1,5 +1,3 @@
-IF NOT DEFINED CM_LLVM_CLANG_BIN SET CM_LLVM_CLANG_BIN=clang.exe
-
-%CM_LLVM_CLANG_BIN% --version > tmp-ver.out
+%CM_LLVM_CLANG_BIN_WITH_PATH% --version > tmp-ver.out
 IF %ERRORLEVEL% NEQ 0 EXIT %ERRORLEVEL%
 
