@@ -1,3 +1,8 @@
+20220610:
+ * added "versions" key in script meta. 
+   It is now possible to update env, new_env, deps from this dict using --version 
+   or env CM_NEED_VERSION
+
 20220608:
  * deprecated "ic" automation. Use "script" instead!
 
