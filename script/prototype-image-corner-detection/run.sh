@@ -20,7 +20,7 @@ echo ""
 cd ${CM_CURRENT_PATH}
 
 CM_INPUT=${CM_INPUT:-${CM_CURRENT_SCRIPT_PATH}/data.pgm}
-CM_OUTPUT=${CM_OUTPUT:-output_image_with_edges.pgm}
+CM_OUTPUT=${CM_OUTPUT:-output_image_with_corners.pgm}
 
 ${CM_CURRENT_SCRIPT_PATH}/a.out ${CM_INPUT} ${CM_OUTPUT} -c
 test $? -eq 0 || exit 1
