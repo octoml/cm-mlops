@@ -2,7 +2,7 @@
 
 CUR_DIR=${PWD:-tmp}
 
-#git clone --recursive -b "${CM_GIT_CHECKOUT}" ${CM_GIT_URL} src
+git clone --recursive -b "${CM_GIT_CHECKOUT}" ${CM_GIT_URL} src
 
 test $? -eq 0 || exit 1
 
