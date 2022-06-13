@@ -22,11 +22,6 @@
     "DNNL_CPU_RUNTIME": "OMP"
   },
   "install": true,
-  "post_deps": [
-    {
-      "take_version_from_env": false
-    }
-  ],
   "tags": [
     "prototype",
     "install",
