@@ -9,6 +9,9 @@
     },
     {
       "tags": "get,llvm"
+    },
+    {
+      "tags": "cmake,get-cmake"
     }
   ],
   "install": true,
