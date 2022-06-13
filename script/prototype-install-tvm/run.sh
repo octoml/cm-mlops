@@ -1,9 +1,17 @@
 #!/bin/bash
 
-git clone --recursive https://github.com/apache/tvm tvm
+echo "git clone --recursive -b ${CM_GIT_CHECKOUT} ${CM_GIT_URL} tvm"
+git clone --recursive -b "${CM_GIT_CHECKOUT}" ${CM_GIT_URL} tvm
+
 test $? -eq 0 || exit 1
 
 cd tvm 
+if [ "${CM_GIT_SHA}" != "" ]; then
+  echo "git checkout ${CM_GIT_SHA}"
+  git checkout ${CM_GIT_SHA}
+  if [ "${?}" != "0" ]; then exit 1; fi
+fi
+
 mkdir build
 
 cp cmake/config.cmake build
