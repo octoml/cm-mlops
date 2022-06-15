@@ -12,8 +12,8 @@ def postprocess(i):
 
     env = i['env']
 
-    env['+C_INCLUDE_PATH'] = os.path.join(os.getcwd(), 'install', 'include')
-    env['+CXX_INCLUDE_PATH'] = os.path.join(os.getcwd(), 'install', 'include')
-    env['+LD_LIBRARY_PATH'] = os.path.join(os.getcwd(), 'install', 'lib')
+    env['+C_INCLUDE_PATH'] = [os.path.join(os.getcwd(), 'install', 'include')]
+    env['+CXX_INCLUDE_PATH'] = [os.path.join(os.getcwd(), 'install', 'include')]
+    env['+LD_LIBRARY_PATH'] = [os.path.join(os.getcwd(), 'install', 'lib')]
 
     return {'return':0}
