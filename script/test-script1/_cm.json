@@ -1,0 +1,48 @@
+{
+  "alias": "test-script1",
+  "automation_alias": "script",
+  "automation_uid": "5b4e0237da074764",
+  "default_version": "main",
+  "deps": [
+    {"tags":"get,cmake"},
+    {"tags":"get,llvm"}
+  ],
+  "env": {
+    "CM_ENV1": "TEST1",
+    "CM_ENV2": "TEST2"
+  },
+  "post_deps": [],
+  "tags": [
+    "test",
+    "script1"
+  ],
+  "uid": "031dbfef84c447d0",
+  "variations": {
+    "var_a": {
+      "env": {
+        "CM_ENV1": "VARA1",
+        "CM_ENV2": "VARA2"
+      }
+    },
+    "var_b": {
+      "env": {
+        "CM_ENV1": "VARB1",
+        "CM_ENV2": "VARB2"
+      }
+    }
+  },
+  "versions": {
+    "ver_x": {
+      "env": {
+        "CM_ENV1": "VERX1",
+        "CM_ENV2": "VERX2"
+      }
+    },
+    "ver_y": {
+      "env": {
+        "CM_ENV1": "VERY1",
+        "CM_ENV2": "VERY2"
+      }
+    }
+  }
+}

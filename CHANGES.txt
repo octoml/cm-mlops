@@ -1,3 +1,10 @@
+20220615:
+ * major update of script (remove parallel env/new_env and state/new_state).
+   keep global env & state and detect changes automatically
+ * major simplification of "script"
+ * removed "installed" to be more understandable
+ * added "cached" to be more understandable
+
 20220610:
  * added "versions" key in script meta. 
    It is now possible to update env, new_env, deps from this dict using --version 

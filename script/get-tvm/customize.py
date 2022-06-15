@@ -12,8 +12,8 @@ def postprocess(i):
 
     env = i['env']
 
-    env['+C_INCLUDE_PATH'] = os.path.join(os.getcwd(), 'install', 'include')
-    env['+CXX_INCLUDE_PATH'] = os.path.join(os.getcwd(), 'install', 'include')
-    env['+LD_LIBRARY_PATH'] = os.path.join(os.getcwd(), 'install', 'lib')
+    tvm_home = env['TVM_HOME']
+
+    env['+PYTHONPATH'] = [os.path.join(tvm_home,'python')]
 
     return {'return':0}

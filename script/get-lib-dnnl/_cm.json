@@ -21,10 +21,9 @@
     "DNNL_BUILD_EXAMPLES": "OFF",
     "DNNL_CPU_RUNTIME": "OMP"
   },
-  "install": true,
+  "cache": true,
   "tags": [
-    "prototype",
-    "install",
+    "get",
     "lib-dnnl",
     "lib",
     "dnnl"
@@ -36,7 +35,7 @@
         "CM_GIT_CHECKOUT": "master"
       }
     },
-    "v2.2.4": {
+    "2.2.4": {
       "env": {
         "CM_GIT_CHECKOUT": "v2.2.4"
       }
