@@ -22,13 +22,13 @@
       "tags": "get,dataset,image-classification,original"
     },
     {
-      "tags": "get,tvm"
+      "tags": "get,tvm,_llvm"
     },
     {
       "tags": "get,dataset-aux,image-classification"
     },
     {
-      "tags": "get,ml-model,image-classification,onnx"
+      "tags": "get,ml-model,image-classification,resnet50-onnx"
     }
   ],
   "env": {
