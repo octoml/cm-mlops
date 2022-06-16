@@ -28,5 +28,13 @@ wget -nc https://raw.githubusercontent.com/mlcommons/ck-mlops/main/program/ml-ta
 test $? -eq 0 || exit 1
 ${CM_PYTHON_BIN} -m pip install -r ${CM_TMP_CURRENT_SCRIPT_PATH}/requirements.txt
 test $? -eq 0 || exit 1
-${CM_PYTHON_BIN} ${CM_TMP_CURRENT_SCRIPT_PATH}/src/classify.py --image ${CK_ENV_DATASET_IMAGENET_VAL}/ILSVRC2012_val_00000001.JPEG
+
+if [[ "${CM_INPUT}" != "" ]]; then 
+  export CM_IMAGE=${CM_INPUT}
+else
+  export CM_IMAGE=${CK_ENV_DATASET_IMAGENET_VAL}/ILSVRC2012_val_00000001.JPEG
+fi
+
+
+${CM_PYTHON_BIN} ${CM_TMP_CURRENT_SCRIPT_PATH}/src/classify.py --image ${CM_IMAGE}
 test $? -eq 0 || exit 1
