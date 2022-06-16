@@ -16,11 +16,6 @@
   ],
   "env": {},
   "cache": true,
-  "post_deps": [
-    {
-      "take_version_from_env": true
-    }
-  ],
   "tags": [
     "get",
     "tvm",

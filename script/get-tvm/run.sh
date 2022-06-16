@@ -1,9 +1,10 @@
 #!/bin/bash
 
-echo "git clone --recursive -b ${CM_GIT_CHECKOUT} ${CM_GIT_URL} tvm"
-git clone --recursive -b "${CM_GIT_CHECKOUT}" ${CM_GIT_URL} tvm
-
-test $? -eq 0 || exit 1
+if [ ! -d "tvm" ]; then
+  echo "git clone --recursive -b ${CM_GIT_CHECKOUT} ${CM_GIT_URL} tvm"
+  git clone --recursive -b "${CM_GIT_CHECKOUT}" ${CM_GIT_URL} tvm
+  test $? -eq 0 || exit 1
+fi
 
 cd tvm 
 if [ "${CM_GIT_SHA}" != "" ]; then

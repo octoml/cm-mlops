@@ -28,7 +28,7 @@
       "tags": "get,dataset-aux,image-classification"
     },
     {
-      "tags": "get,ml-model,image-classification,onnx"
+      "tags": "get,ml-model-onnx,image-classification"
     }
   ],
   "env": {
