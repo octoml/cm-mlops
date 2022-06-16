@@ -22,7 +22,7 @@
       "tags": "get,dataset,image-classification,original"
     },
     {
-      "tags": "get,tvm"
+      "tags": "get,tvm,_llvm"
     },
     {
       "tags": "get,dataset-aux,image-classification"
