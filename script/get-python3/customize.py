@@ -13,6 +13,9 @@ def preprocess(i):
                                        'env': env,
                                        'os_info':os_info,
                                        'default_path_env_key': 'PATH',
+                                       'detect_version':True,
+                                       'env_path_key':'CM_PYTHON_BIN',
+                                       'run_script_input':i['run_script_input'],
                                        'recursion_spaces':i['recursion_spaces']})
     if r['return'] >0 : return r
 
@@ -43,6 +46,6 @@ def postprocess(i):
 
     version = r['version']
 
-    print (i['recursion_spaces'] + '    Detected version: {}'.format(version))
+    print (i['recursion_spaces'] + '      Detected version: {}'.format(version))
 
     return {'return':0, 'version':version}
