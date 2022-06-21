@@ -20,15 +20,13 @@ def preprocess(i):
 
     print (recursion_spaces + '    # Requested version: {}'.format(need_version))
 
-    return {'return':0}
+    path_bin = os.path.join(os.getcwd(), 'install', 'bin')
 
-def postprocess(i):
+    env['CM_TMP_PATH'] = path_bin
+    env['CM_TMP_FAIL_IF_NOT_FOUND'] = 'yes'
 
-    env = i['env']
-
-    env['+PATH'] = [os.path.join(os.getcwd(), 'install', 'bin')]
+    env['+PATH'] = [path_bin]
     env['+LD_LIBRARY_PATH'] = [os.path.join(os.getcwd(), 'install', 'lib')]
     env['+C_INCLUDE_PATH'] = [os.path.join(os.getcwd(), 'install', 'include')]
 
     return {'return':0}
-

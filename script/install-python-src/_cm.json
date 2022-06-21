@@ -19,8 +19,7 @@
   },
   "post_deps": [
     {
-      "tags": "get,python",
-      "take_version_from_env": true
+      "tags": "get,python"
     }
   ],
   "tags": [

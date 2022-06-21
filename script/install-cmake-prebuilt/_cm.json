@@ -14,8 +14,7 @@
   "cache": true,
   "post_deps": [
     {
-      "tags": "get,cmake",
-      "take_version_from_env": true
+      "tags": "get,cmake"
     }
   ],
   "tags": [

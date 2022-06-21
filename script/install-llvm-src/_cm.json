@@ -17,8 +17,7 @@
   "cache": true,
   "post_deps": [
     {
-      "tags": "get,llvm",
-      "take_version_from_env": true
+      "tags": "get,llvm"
     }
   ],
   "tags": [

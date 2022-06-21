@@ -27,14 +27,15 @@ cd src
 wget ${CM_WGET_URL}
 
 if [ "${?}" != "0" ]; then exit 1; fi
+
 tar xzf Python-${PYTHON_VERSION}.tgz && \
 rm -f Python-${PYTHON_VERSION}.tgz && \
 cd Python-${PYTHON_VERSION} && \
 ./configure --enable-optimizations ${SHARED_BUILD_FLAGS} ${EXTRA_FLAGS} --with-ensurepip=install --prefix=${CUR_DIR}/install && \
-make -j${CM_MAKE_CORES} altinstall && \
+make -j${CM_MAKE_CORES} && \
+make install && \
 cd ${CUR_DIR} && \
 rm -rf src
-
 
 if [ "${?}" != "0" ]; then exit 1; fi
 
