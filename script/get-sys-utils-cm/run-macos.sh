@@ -1,11 +1,14 @@
 #!/bin/bash
 
-echo "************************************************"
-echo "Installing some system dependencies via sudo apt"
-echo "Enter skip to skip this step or press enter to continue:"
-read DUMMY
+echo "***************************************************"
+echo "Installing some system dependencies via brew update"
 
-if [[ "$DUMMY" == "skip" ]]; then exit 0; fi
+if [[ "$CM_TMP_QUIET" != "yes" ]]; then 
+ echo "Enter skip to skip this step or press enter to continue:"
+ read DUMMY
+
+ if [[ "$DUMMY" == "skip" ]]; then exit 0; fi
+fi
 
 brew update && \
      brew install \
