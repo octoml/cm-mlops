@@ -14,9 +14,9 @@ def preprocess(i):
 
     recursion_spaces = i['recursion_spaces']
 
-    need_version = env.get('CM_NEED_VERSION','')
+    need_version = env.get('CM_VERSION','')
     if need_version == '':
-        return {'return':1, 'error':'internal problem - CM_NEED_VERSION is not defined in env'}
+        return {'return':1, 'error':'internal problem - CM_VERSION is not defined in env'}
 
     print (recursion_spaces + '    # Requested version: {}'.format(need_version))
 
