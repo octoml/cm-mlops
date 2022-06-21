@@ -2,6 +2,7 @@
  * Added support for --quiet
  * changed CM_NEED_VERSION to CM_VERSION
  * added CM_VERSION_MIN, CM_VERSION_MAX
+ * added support for local_env (remove from deps) - mainly version/min/max
 
 20220617:
  * fixed logic to handle variations (-_): https://github.com/mlcommons/ck/issues/243
