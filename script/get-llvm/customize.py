@@ -16,6 +16,9 @@ def preprocess(i):
                                        'env': env,
                                        'os_info':os_info,
                                        'default_path_env_key': 'PATH',
+                                       'detect_version':True,
+                                       'env_path_key':'CM_LLVM_CLANG_BIN_WITH_PATH',
+                                       'run_script_input':i['run_script_input'],
                                        'recursion_spaces':recursion_spaces})
     if r['return'] >0 : 
        if r['return'] == 16:
