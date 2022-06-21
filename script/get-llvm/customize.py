@@ -56,8 +56,6 @@ def preprocess(i):
     return {'return':0}
 
 
-
-
 def postprocess(i):
 
     r = i['automation'].parse_version({'match_text': r'clang version\s*([\d.]+)',
