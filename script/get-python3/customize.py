@@ -7,6 +7,8 @@ def preprocess(i):
 
     env = i['env']
 
+    recursion_spaces = i['recursion_spaces']
+
     file_name = 'python.exe' if os_info['platform'] == 'windows' else 'python3'
 
     r = i['automation'].find_artifact({'file_name': file_name,
@@ -17,7 +19,18 @@ def preprocess(i):
                                        'env_path_key':'CM_PYTHON_BIN',
                                        'run_script_input':i['run_script_input'],
                                        'recursion_spaces':i['recursion_spaces']})
-    if r['return'] >0 : return r
+    if r['return'] >0:
+       if r['return'] == 16 and os_info['platform'] != 'windows':
+           if env.get('CM_TMP_FAIL_IF_NOT_FOUND','').lower() == 'yes':
+               return r
+
+           print (recursion_spaces+'    # {}'.format(r['error']))
+
+           # Attempt to run installer
+           r = {'return':0, 'skip':True, 'script':{'tags':'install,python,src'}}
+
+       return r
+
 
     found_path = r['found_path']
 
