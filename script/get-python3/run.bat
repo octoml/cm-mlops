@@ -1,4 +1,2 @@
-IF NOT DEFINED CM_PYTHON_BIN SET CM_PYTHON_BIN=python.exe
-
-%CM_PYTHON_BIN% --version > tmp-ver.out
+%CM_PYTHON_BIN_WITH_PATH% --version > tmp-ver.out
 IF %ERRORLEVEL% NEQ 0 EXIT %ERRORLEVEL%

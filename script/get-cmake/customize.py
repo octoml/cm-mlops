@@ -41,7 +41,6 @@ def preprocess(i):
 
 
 
-
 def postprocess(i):
 
     r = i['automation'].parse_version({'match_text': r'cmake version\s*([\d.]+)',

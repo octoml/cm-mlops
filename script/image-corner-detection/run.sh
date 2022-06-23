@@ -5,6 +5,12 @@
 rm a.out
 
 echo ""
+echo "Checking clang version ..."
+echo ""
+
+clang --version
+
+echo ""
 echo "Compiling program ..."
 echo ""
 

@@ -16,7 +16,7 @@ def preprocess(i):
                                        'os_info':os_info,
                                        'default_path_env_key': 'PATH',
                                        'detect_version':True,
-                                       'env_path_key':'CM_PYTHON_BIN',
+                                       'env_path_key':'CM_PYTHON_BIN_WITH_PATH',
                                        'run_script_input':i['run_script_input'],
                                        'recursion_spaces':i['recursion_spaces']})
     if r['return'] >0:
@@ -42,6 +42,18 @@ def preprocess(i):
         if extra_path not in default_path_list and extra_path+os.sep not in default_path_list:
             if '+PATH' not in env: env['+PATH'] = []
             env['+PATH'].append(os.path.join(os.path.dirname(found_path), 'Scripts'))
+
+    # Check if include and lib:
+    found_path_root = os.path.dirname(found_path)
+    for x in [{'path': os.path.join(found_path_root, 'lib'), 'var':'LD_LIBRARY_PATH'},
+              {'path': os.path.join(found_path_root, 'include'), 'var':'C_INCLUDE_PATH'}]:
+        path = x['path']
+        var = x['var']
+
+        if os.path.isdir(path):
+            default_path = os.environ.get(var, '').split(os_info['env_separator'])
+            if path not in default_path and path+os.sep not in default_path:
+                env['+'+var] = [path]
 
     env['CM_PYTHON_BIN']=file_name
     env['CM_PYTHON_BIN_WITH_PATH']=os.path.join(found_path, file_name)

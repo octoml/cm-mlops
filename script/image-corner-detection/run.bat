@@ -3,6 +3,12 @@ rem Compile
 del a.exe
 
 echo.
+echo Checking clang version ...
+echo.
+
+clang --version
+
+echo.
 echo Compiling program ...
 echo.
 

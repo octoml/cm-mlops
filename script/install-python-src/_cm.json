@@ -32,12 +32,12 @@
   "variations": {
     "shared": {
       "env": {
-	"CM_SHARED_BUILD": "yes"
+        "CM_SHARED_BUILD": "yes"
       }
     },
     "with-ssl": {
       "env": {
-	"CM_ENABLE_SSL": "yes"
+        "CM_ENABLE_SSL": "yes"
       }
     }
   }

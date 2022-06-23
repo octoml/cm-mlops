@@ -25,8 +25,4 @@ def preprocess(i):
     env['CM_TMP_PATH'] = path_bin
     env['CM_TMP_FAIL_IF_NOT_FOUND'] = 'yes'
 
-    env['+PATH'] = [path_bin]
-    env['+LD_LIBRARY_PATH'] = [os.path.join(os.getcwd(), 'install', 'lib')]
-    env['+C_INCLUDE_PATH'] = [os.path.join(os.getcwd(), 'install', 'include')]
-
     return {'return':0}
