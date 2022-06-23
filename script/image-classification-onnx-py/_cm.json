@@ -13,7 +13,8 @@
       "tags": "get,sys-utils-cm"
     },
     {
-      "tags": "get,python"
+      "tags": "get,python",
+      "version_max": "3.9.999"
     },
     {
       "tags": "get,dataset,image-classification,original"

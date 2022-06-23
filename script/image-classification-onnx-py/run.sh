@@ -4,7 +4,7 @@
 #echo ${CM_DATASET_PATH}
 #echo ${CM_DATASET_AUX_PATH}
 #echo ${CM_ML_MODEL_FILE_WITH_PATH}
-
+CM_PYTHON_BIN=${CM_PYTHON_BIN:-python3}
 CM_TMP_CURRENT_SCRIPT_PATH=${CM_TMP_CURRENT_SCRIPT_PATH:-$PWD}
 
 # connect CM intelligent components with CK env
