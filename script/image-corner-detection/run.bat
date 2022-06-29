@@ -3,10 +3,10 @@ rem Compile
 del a.exe
 
 echo.
-echo Checking clang version ...
+echo Checking compiler version ...
 echo.
 
-clang --version
+%CM_C_COMPILER_WITH_PATH% --version
 
 echo.
 echo Compiling program ...

@@ -5,10 +5,10 @@
 rm a.out
 
 echo ""
-echo "Checking clang version ..."
+echo "Checking compiler version ..."
 echo ""
 
-clang --version
+${CM_C_COMPILER_WITH_PATH} --version
 
 echo ""
 echo "Compiling program ..."
@@ -16,7 +16,7 @@ echo ""
 
 cd ${CM_TMP_CURRENT_SCRIPT_PATH}
 
-${CM_C_COMPILER_WITH_PATH} -O3 -lm susan.c
+${CM_C_COMPILER_WITH_PATH} -O3 susan.c -lm
 test $? -eq 0 || exit 1
 
 # Return to the original path obtained in CM
