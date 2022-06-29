@@ -36,7 +36,7 @@ def preprocess(i):
 
 def postprocess(i):
 
-    r = i['automation'].parse_version({'match_text': r'\s*([\d.]+)',
+    r = i['automation'].parse_version({'match_text': r'\s*([\d.a-z\-]+)',
                                        'group_number': 1,
                                        'env_key':'CM_TENSORFLOW_VERSION',
                                        'which_env':i['env']})
