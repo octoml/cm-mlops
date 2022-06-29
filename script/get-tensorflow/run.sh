@@ -1,16 +1,11 @@
 #!/bin/bash
 
-CM_PYTHON_BIN=${CM_PYTHON_BIN:-python3}
-
-if [ -n ${CM_VERSION} ]; then
-    VERSION_STRING="==${CM_VERSION}"
-elif [ -n ${CM_VERSION_MIN}  and -n ${CM_VERSION_MAX} ]; then
-    VERSION_STRING=">=${CM_VERSION_MIN},<=${CM_VERSION_MAX}"
-elif [ -n ${CM_VERSION_MAX} ]; then
-    VERSION_STRING="<=${CM_VERSION_MAX}"
-else
-    VERSION_STRING=""
-fi
-
-${CM_PYTHON_BIN} -m pip install tensorflow${VERSION_STRING}
+CM_PYTHON_BIN_WITH_PATH=${CM_PYTHON_BIN_WITH_PATH:-python3}
+${CM_PYTHON_BIN_WITH_PATH} -c '
+try:
+    import tensorflow as tf
+    print(tf.__version__)
+except ImportError as e:
+    from sys import stderr
+'  > tmp-ver.out
 test $? -eq 0 || exit 1
