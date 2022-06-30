@@ -7,6 +7,9 @@ def preprocess(i):
 
     env = i['env']
 
+    print (env)
+    input('xyz')
+
     recursion_spaces = i['recursion_spaces']
 
     r = i['automation'].detect_version_using_script({
