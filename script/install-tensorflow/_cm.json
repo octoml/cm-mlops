@@ -11,6 +11,9 @@
     },
     {
       "tags": "detect-cpu"
+    },
+    {
+      "tags": "get,python"
     }
   ],
   "post_deps": [
