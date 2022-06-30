@@ -19,7 +19,6 @@
   "post_deps": [
     {
       "tags": "get,tensorflow,python-lib",
-      "new": true,
       "const": {
          "CM_TMP_FAIL_IF_NOT_FOUND": "yes"
       }
