@@ -1,0 +1,25 @@
+{
+  "alias": "get-pytorch",
+  "automation_alias": "script",
+  "automation_uid": "5b4e0237da074764",
+  "cache": true,
+  "clean_files": [],
+  "deps": [
+    {
+      "tags": "set,echo-off,win"
+    },
+    {
+      "tags": "detect-cpu"
+    },
+    {
+      "tags": "get,python"
+    }
+  ],
+  "tags": [
+    "get",
+    "torch",
+    "pytorch",
+    "python-lib"
+  ],
+  "uid": "5c8cd9de296349f7"
+}
