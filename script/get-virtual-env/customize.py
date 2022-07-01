@@ -12,9 +12,11 @@ def preprocess(i):
     recursion_spaces = i['recursion_spaces']
 
     env['CM_VIRTUAL_ENV_PATH'] = os.path.join(os.getcwd(), 'venv')
-    env['CM_VIRTUAL_ENV_SCRIPTS_PATH'] = os.path.join(env['CM_VIRTUAL_ENV_PATH'], 'Scripts')
 
-    env['CM_TMP_PATH'] = os.path.join(env['CM_VIRTUAL_ENV_PATH'], 'Scripts')
+    s = 'Scripts' if os_info['platform'] == 'windows' else 'bin'
+    env['CM_VIRTUAL_ENV_SCRIPTS_PATH'] = os.path.join(env['CM_VIRTUAL_ENV_PATH'], s)
+
+    env['CM_TMP_PATH'] = env['CM_VIRTUAL_ENV_SCRIPTS_PATH']
     env['CM_TMP_FAIL_IF_NOT_FOUND'] = 'yes'
 
     return {'return':0}
@@ -39,5 +41,5 @@ def postprocess(i):
 
     script_prefix.append(s)
     state['script_prefix'] = script_prefix
-     
+
     return {'return':0}
