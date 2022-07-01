@@ -14,7 +14,7 @@
     {
       "tags": "get,python",
       "version_default": "3.9.12",
-      "version_max": "3.10.-1"
+      "version_max": "3.9.999"
     }
   ],
   "tags": [
