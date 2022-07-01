@@ -31,7 +31,6 @@ def preprocess(i):
 
        return r
 
-
     found_path = r['found_path']
 
     if os_info['platform'] == 'windows':
@@ -40,8 +39,10 @@ def preprocess(i):
         extra_path = os.path.join(os.path.dirname(found_path), 'Scripts')
 
         if extra_path not in default_path_list and extra_path+os.sep not in default_path_list:
-            if '+PATH' not in env: env['+PATH'] = []
-            env['+PATH'].append(os.path.join(os.path.dirname(found_path), 'Scripts'))
+            paths = env.get('+PATH',[])
+            if extra_path not in paths:
+                paths.append(extra_path)
+                env['+PATH']=paths
 
     # Check if include and lib:
     found_path_root = os.path.dirname(found_path)
