@@ -1,0 +1,38 @@
+{
+  "alias": "install-cuda-prebuilt",
+  "automation_alias": "script",
+  "automation_uid": "5b4e0237da074764",
+  "cache": true,
+  "deps": [
+    {
+      "tags": "set,echo-off,win"
+    },
+    {
+      "tags": "detect,os,info"
+    }
+  ],
+  "env": {
+    "USE_PACKAGE_MANAGER_INSTALL": "yes"
+  },
+  "post_deps": [
+    {
+      "tags": "get,cuda"
+    }
+  ],
+  "tags": [
+    "install",
+    "prebuilt",
+    "cuda",
+    "prebuilt-cuda",
+    "install-prebuilt-cuda"
+  ],
+  "uid": "14eadcd42ba340c3",
+  "variations": {
+    "binary-install": {
+      "env": {
+	"USE_PACKAGE_MANAGER_INSTALL": "no",
+	"CM_VERSION": "11.7.0"
+      }
+    }
+  }
+}
