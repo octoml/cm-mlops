@@ -10,10 +10,19 @@
       "tags": "detect,os,info"
     },
     {
-      "tags": "get,sys-utils-cm"
+      "tags": "get,onnxruntime",
+      "enable_if_env": {
+	"CM_BACKEND": ["onnxruntime"]
+      }
     },
     {
-      "tags": "get,python"
+      "tags": "get,python",
+      "skip_if_env": {
+	"CM_BACKEND": ["onnxruntime"]
+      }
+    },
+    {
+      "tags": "get,sys-utils-cm"
     },
     {
       "tags": "get,loadgen"
@@ -28,12 +37,47 @@
       "tags": "get,dataset-aux,image-classification"
     },
     {
-      "tags": "get,ml-model-tf,image-classification"
+      "tags": "get,ml-model-tf,image-classification",
+      "enable_if_env": {
+	"CM_BACKEND": ["tf", "tflite"]
+      }
+    },
+    {
+      "tags": "get,ml-model-pytorch,image-classification",
+      "enable_if_env": {
+	"CM_BACKEND": ["pytorch"]
+      }
+    },
+    {
+      "tags": "get,ml-model-onnx,image-classification",
+      "enable_if_env": {
+	"CM_BACKEND": ["onnxruntime"]
+      }
+    },
+    {
+      "tags": "get,cuda",
+      "enable_if_env": {
+	"CM_DEVICE": ["gpu"]
+      }
+    },
+    {
+      "tags": "get,tensorflow",
+      "enable_if_env": {
+	"CM_BACKEND": ["tf"]
+      }
+    },
+    {
+      "tags": "get,pytorch",
+      "enable_if_env": {
+	"CM_BACKEND": ["pytorch", "onnxruntime"]
+      }
     }
   ],
   "env": {
     "CM_BATCH_COUNT": "1",
-    "CM_BATCH_SIZE": "1"
+    "CM_BATCH_SIZE": "1",
+    "CM_BACKEND": "tf",
+    "CM_DEVICE": "cpu"
   },
   "tags": [
     "app",
@@ -42,5 +86,37 @@
     "reference",
     "python"
   ],
-  "uid": "d775cac873ee4231"
+  "uid": "d775cac873ee4231",
+  "variations": {
+    "cpu": {
+      "env": {
+	"CM_DEVICE": "cpu"
+      }
+    },
+    "gpu": {
+      "env": {
+	"CM_DEVICE": "gpu"
+      }
+    },
+    "onnxruntime": {
+      "env": {
+	"CM_BACKEND": "onnxruntime"
+      }
+    },
+    "pytorch": {
+      "env": {
+	"CM_BACKEND": "pytorch"
+      }
+    },
+    "tf": {
+      "env": {
+	"CM_BACKEND": "tf"
+      }
+    },
+    "tflite": {
+      "env": {
+	"CM_BACKEND": "tflite"
+      }
+    }
+  }
 }
