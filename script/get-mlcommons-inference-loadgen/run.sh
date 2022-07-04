@@ -6,7 +6,7 @@ echo "******************************************************"
 echo "Cloning Mlcommons from ${CM_GIT_URL} with branch ${CM_GIT_CHECKOUT}..."
 
 if [ ! -d "inference" ]; then
-  git clone -b "${CM_GIT_CHECKOUT}" ${CM_GIT_URL} inference
+  git clone --recurse-submodules -b "${CM_GIT_CHECKOUT}" ${CM_GIT_URL} inference
   if [ "${?}" != "0" ]; then exit 1; fi
 fi
 
@@ -34,6 +34,11 @@ if [ "${?}" != "0" ]; then exit 1; fi
 # Clean build directory (too large)
 cd ${CUR_DIR}
 rm -rf build
+
+cd inference/loadgen
+CFLAGS="-std=c++14 -O3" ${CM_PYTHON_BIN} setup.py bdist_wheel
+${CM_PYTHON_BIN} -m pip install --force-reinstall `ls dist/mlperf_loadgen*.whl`
+if [ "${?}" != "0" ]; then exit 1; fi
 
 echo "******************************************************"
 echo "Loadgen is built and installed to ${INSTALL_DIR} ..."
