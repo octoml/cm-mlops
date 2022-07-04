@@ -38,5 +38,7 @@ rm -rf src
 
 if [ "${?}" != "0" ]; then exit 1; fi
 
+cd ${CUR_DIR}/install/bin && ln -s python3 python
+
 echo "********************************************************"
 echo "Python was built and installed to ${CUR_DIR}/install ..."

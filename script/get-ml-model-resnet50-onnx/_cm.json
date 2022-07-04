@@ -13,7 +13,8 @@
     "resnet50",
     "resnet50-onnx",
     "image-classification",
-    "ml-model-onnx"
+    "ml-model-onnx",
+    "fp32"
   ],
   "uid": "56203e4e998b4bc0",
   "variations": {

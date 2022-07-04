@@ -13,7 +13,8 @@
     "resnet50",
     "resnet50-tf",
     "image-classification",
-    "ml-model-tf"
+    "ml-model-tf",
+    "fp32"
   ],
   "uid": "4ec1e64754ff455b"
 }

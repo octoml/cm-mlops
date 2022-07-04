@@ -6,15 +6,14 @@
   "clean_files": [],
   "deps": [
     {
+      "tags": "get,python",
+      "version": "3.9.12"
+    },
+    {
       "tags": "set,echo-off,win"
     },
     {
       "tags": "detect-cpu"
-    },
-    {
-      "tags": "get,python",
-      "version_default": "3.9.12",
-      "version_max": "3.9.999"
     }
   ],
   "tags": [

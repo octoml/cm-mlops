@@ -25,5 +25,6 @@ def preprocess(i):
     # Add to path
     env['CM_ML_MODEL_FILE']=r['filename']
     env['CM_ML_MODEL_FILE_WITH_PATH']=r['path']
+    env['CM_ML_MODEL_PATH']=path
 
     return {'return':0}
