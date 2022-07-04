@@ -1,8 +1,13 @@
+20220704:
+ * fixed get-python-venv
+
 20220621:
- * Added support for --quiet
+ * added prototype of get-virtual-env
+ * added support for --quiet
  * changed CM_NEED_VERSION to CM_VERSION
  * added CM_VERSION_MIN, CM_VERSION_MAX
  * added support for local_env (remove from deps) - mainly version/min/max
+ * added support in get-pytohn3 to detect min/max/correct versions
 
 20220617:
  * fixed logic to handle variations (-_): https://github.com/mlcommons/ck/issues/243
