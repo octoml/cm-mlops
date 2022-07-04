@@ -35,9 +35,16 @@ if [ "${?}" != "0" ]; then exit 1; fi
 cd ${CUR_DIR}
 rm -rf build
 
+${CM_PYTHON_BIN} -m pip install wheel
+PYTHON_VERSION=`${CM_PYTHON_BIN} -V |cut -d' ' -f2`
+PYTHON_SHORT_VERSION=${PYTHON_VERSION%.*}
+MLC_INFERENCE_PYTHON_SITE_BASE=${INSTALL_DIR}"/python"
+MLC_INFERENCE_PYTHON_SITE=${MLC_INFERENCE_PYTHON_SITE_BASE}"/lib/python${PYTHON_SHORT_VERSION}/site-packages"
+echo "PYTHONPATH=$PYTHONPATH:${MLC_INFERENCE_PYTHON_SITE}" >> tmp-run-env.out
+
 cd inference/loadgen
 CFLAGS="-std=c++14 -O3" ${CM_PYTHON_BIN} setup.py bdist_wheel
-${CM_PYTHON_BIN} -m pip install --force-reinstall `ls dist/mlperf_loadgen*.whl`
+${CM_PYTHON_BIN} -m pip install --force-reinstall `ls dist/mlperf_loadgen*.whl` --prefix=${MLC_INFERENCE_PYTHON_SITE_BASE}
 if [ "${?}" != "0" ]; then exit 1; fi
 
 echo "******************************************************"
