@@ -20,8 +20,10 @@
     "get",
     "install",
     "src",
+    "source",
     "loadgen",
     "inference",
+    "mlperf",
     "mlcommons"
   ],
   "uid": "64c3d98d0ba04950",

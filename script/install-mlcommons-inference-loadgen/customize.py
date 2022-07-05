@@ -18,5 +18,6 @@ def postprocess(i):
     env['+LD_LIBRARY_PATH'] = [os.path.join(os.getcwd(), 'install', 'lib')]
 
     env['CM_MLC_INFERENCE_SOURCE'] = os.path.join(os.getcwd(), 'inference')
+    env['CM_MLC_INFERENCE_VISION_PATH'] = os.path.join(os.getcwd(), 'inference', 'vision', 'classification_and_detection')
 
     return {'return':0}
