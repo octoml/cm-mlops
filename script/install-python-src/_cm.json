@@ -26,6 +26,8 @@
     "install",
     "src",
     "python",
+    "python3",
+    "src-python3",
     "src-python"
   ],
   "uid": "12d3a608afe14a1e",

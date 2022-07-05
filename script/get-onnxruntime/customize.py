@@ -13,19 +13,25 @@ def preprocess(i):
                'env': env,
                'run_script_input':i['run_script_input'],
                'recursion_spaces':recursion_spaces})
+
     if r['return'] >0:
-       if r['return'] == 16:
-           if env.get('CM_TMP_FAIL_IF_NOT_FOUND','').lower() == 'yes':
-               return r
+        if r['return'] == 16:
+            if env.get('CM_TMP_FAIL_IF_NOT_FOUND','').lower() == 'yes':
+                return r
 
-           print (recursion_spaces+'    # {}'.format(r['error']))
+            print (recursion_spaces+'    # {}'.format(r['error']))
 
-           # Attempt to run installer
-           r = {'return':0, 'skip':True, 'script':{'tags':'install,onnxruntime,python-lib'}}
+            # Attempt to run installer
+            r = {'return':0, 'skip':True, 'script':{'tags':'install,onnxruntime,python-lib'}}
 
-       return r
+        return r
 
-    return {'return':0}
+    add_extra_cache_tags = []
+    if 'CM_PYTHON_VERSION' in env:
+        add_extra_cache_tags = ["deps-python-" + env['CM_PYTHON_VERSION']]
+
+
+    return {'return':0, 'add_extra_cache_tags': add_extra_cache_tags}
 
 
 def postprocess(i):

@@ -13,8 +13,8 @@
     },
     {
       "tags": "get,python",
-      "version_max": "3.10.-1",
-      "default_version": "3.9.12"
+      "version_max": "3.9.999",
+      "version_max_default": "3.9.12"
     }
   ],
   "post_deps": [
