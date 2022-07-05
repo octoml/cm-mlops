@@ -28,6 +28,13 @@ def preprocess(i):
     add_python_extra_cache_tags = ['virtual'] # for get-python script
 
     name = env.get('CM_NAME','')
+    if not quiet and name == '':
+        print ('')
+        x = input('Enter some tag to describe this virtual env (mlperf-inf,octoml-bench,etc): ')
+        x = x.strip()
+
+        if x != '': name = x
+    
     if name != '':
         name_tag = name.lower()
 

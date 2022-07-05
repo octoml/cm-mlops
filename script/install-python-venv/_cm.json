@@ -9,7 +9,7 @@
       "tags": "set,echo-off,win"
     },
     {
-      "tags": "get,python"
+      "tags": "get,python,-virtual"
     }
   ],
   "post_deps": [
