@@ -5,6 +5,8 @@ CUR_DIR=$PWD
 echo "***********************************************************"
 export PYTHON_VERSION=${CM_VERSION}
 CM_WGET_URL="${CM_WGET_URL//"[PYTHON_VERSION]"/"$PYTHON_VERSION"}"
+
+echo "CM_WGET_URL=${CM_WGET_URL}" >> tmp-run-env.out
 echo "wget Python src from ${CM_WGET_URL} for version ${PYTHON_VERSION}..."
 
 CM_MAKE_CORES=${CM_MAKE_CORES:-${CM_HOST_CPU_NUMBER_OF_PROCESSORS}}
