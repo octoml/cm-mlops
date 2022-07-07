@@ -1,5 +1,5 @@
 {
-  "alias": "get-mlcommons-inference-loadgen",
+  "alias": "install-mlcommons-inference-loadgen",
   "automation_alias": "script",
   "automation_uid": "5b4e0237da074764",
   "cache": true,
@@ -20,8 +20,10 @@
     "get",
     "install",
     "src",
+    "source",
     "loadgen",
     "inference",
+    "mlperf",
     "mlcommons"
   ],
   "uid": "64c3d98d0ba04950",
