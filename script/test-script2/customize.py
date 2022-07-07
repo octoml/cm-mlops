@@ -9,4 +9,6 @@ def postprocess(i):
 
     env = i['env']
 
+    env['+CM_LIST_ENV']=['a','b']
+
     return {'return':0}
