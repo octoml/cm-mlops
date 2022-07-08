@@ -7,7 +7,7 @@
   "deps": [
     {
       "tags": "get,python",
-      "version_max_default": "3.9.12",
+      "version_max_usable": "3.9.12",
       "version_max": "3.9.999"
     },
     {
