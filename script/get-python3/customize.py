@@ -19,7 +19,7 @@ def preprocess(i):
                                        'env_path_key':'CM_PYTHON_BIN_WITH_PATH',
                                        'run_script_input':i['run_script_input'],
                                        'recursion_spaces':i['recursion_spaces']})
-    if r['return'] >0:
+    if r['return']>0:
        if r['return'] == 16 and os_info['platform'] != 'windows':
            if env.get('CM_TMP_FAIL_IF_NOT_FOUND','').lower() == 'yes':
                return r

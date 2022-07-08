@@ -34,7 +34,7 @@ def preprocess(i):
         x = x.strip()
 
         if x != '': name = x
-    
+
     if name != '':
         name_tag = name.lower()
 
