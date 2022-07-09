@@ -6,6 +6,9 @@ def preprocess(i):
     os_info = i['os_info']
 
     env = i['env']
+    print(env)
+    if env['CM_INSTALL_PYTHON'] == "yes":
+        return {'return':0}
 
     recursion_spaces = i['recursion_spaces']
 
@@ -20,6 +23,7 @@ def preprocess(i):
                                        'run_script_input':i['run_script_input'],
                                        'recursion_spaces':i['recursion_spaces']})
     if r['return']>0:
+       print(r)
        if r['return'] == 16 and os_info['platform'] != 'windows':
            if env.get('CM_TMP_FAIL_IF_NOT_FOUND','').lower() == 'yes':
                return r
@@ -27,7 +31,7 @@ def preprocess(i):
            print (recursion_spaces+'    # {}'.format(r['error']))
 
            # Attempt to run installer
-           r = {'return':0, 'skip':True, 'script':{'tags':'install,python,src'}}
+           r = {'return':0, 'skip':True, 'script':{'tags':'_install-src,python,get-python3'}}
 
        return r
 
@@ -63,6 +67,9 @@ def preprocess(i):
 
 
 def postprocess(i):
+    env = i['env']
+    if env['CM_INSTALL_PYTHON'] == "yes":
+        return {'return':0}
 
     r = i['automation'].parse_version({'match_text': r'Python\s*([\d.]+)',
                                        'group_number': 1,

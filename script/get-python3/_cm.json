@@ -9,12 +9,35 @@
     }
   ],
   "cache": true,
+  "default_version": "3.10.5",
+  "env": {
+    "CM_INSTALL_PYTHON": "no"
+  },
   "tags": [
-    "get",
     "python",
     "python3",
     "get-python",
     "get-python3"
   ],
-  "uid": "d0b5dd74373f4a62"
+  "uid": "d0b5dd74373f4a62",
+  "variations": {
+    "get": {
+      "env": {
+	"CM_INSTALL_PYTHON": "no"
+      }
+    },
+    "install-src": {
+      "env": {
+	"CM_WGET_URL": "https://www.python.org/ftp/python/[PYTHON_VERSION]/Python-[PYTHON_VERSION].tgz",
+	"CM_INSTALL_PYTHON": "yes",
+	"CM_SHARED_BUILD": "no",
+	"CM_ENABLE_SSL": "no"
+      },
+      "post_deps": [
+	{
+	  "tags": "_get,python,get-python3"
+	}
+      ]
+    }
+  }
 }
