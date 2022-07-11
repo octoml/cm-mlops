@@ -43,6 +43,8 @@ def preprocess(i):
 
 def postprocess(i):
 
+    env = i['env']
+
     r = i['automation'].parse_version({'match_text': r'cmake version\s*([\d.]+)',
                                        'group_number': 1,
                                        'env_key':'CM_CMAKE_VERSION',
@@ -52,5 +54,7 @@ def postprocess(i):
     version = r['version']
 
     print (i['recursion_spaces'] + '    Detected version: {}'.format(version))
+
+    env['CM_CMAKE_CACHE_TAGS'] = 'version-'+version
 
     return {'return':0, 'version':version}

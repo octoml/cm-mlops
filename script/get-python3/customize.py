@@ -64,6 +64,8 @@ def preprocess(i):
 
 def postprocess(i):
 
+    env = i['env']
+
     r = i['automation'].parse_version({'match_text': r'Python\s*([\d.]+)',
                                        'group_number': 1,
                                        'env_key':'CM_PYTHON_VERSION',
@@ -73,5 +75,14 @@ def postprocess(i):
     version = r['version']
 
     print (i['recursion_spaces'] + '      Detected version: {}'.format(version))
+
+    # Save tags that can be used to specialize further dependencies (such as python packages)
+    tags = 'version-'+version
+
+    extra_tags = env.get('CM_EXTRA_CACHE_TAGS','')
+    if extra_tags != '':
+        tags += ',' + extra_tags
+
+    env['CM_PYTHON_CACHE_TAGS'] = tags
 
     return {'return':0, 'version':version}

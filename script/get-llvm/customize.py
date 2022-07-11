@@ -49,6 +49,8 @@ def preprocess(i):
 
 def postprocess(i):
 
+    env = i['env']
+
     r = i['automation'].parse_version({'match_text': r'clang version\s*([\d.]+)',
                                        'group_number': 1,
                                        'env_key':'CM_LLVM_CLANG_VERSION',
@@ -58,5 +60,7 @@ def postprocess(i):
     version = r['version']
 
     print (i['recursion_spaces'] + '    Detected version: {}'.format(version))
+
+    env['CM_LLVM_CLANG_CACHE_TAGS'] = 'version-'+version
 
     return {'return':0, 'version':version}

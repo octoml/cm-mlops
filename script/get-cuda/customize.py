@@ -35,11 +35,13 @@ def preprocess(i):
     found_path = r['found_path']
     print(found_path)
     env['CM_NVCC_BIN']=file_name
-    
+
     return {'return':0}
 
 
 def postprocess(i):
+
+    env = i['env']
 
     r = i['automation'].parse_version({'match_text': r'release\s*([\d.]+)',
                                        'group_number': 1,
@@ -50,5 +52,7 @@ def postprocess(i):
     version = r['version']
 
     print (i['recursion_spaces'] + '    Detected version: {}'.format(version))
+
+    env['CM_CUDA_CACHE_TAGS'] = 'version-'+version
 
     return {'return':0, 'version':version}
