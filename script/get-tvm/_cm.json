@@ -8,11 +8,14 @@
       "tags": "set,echo-off,win"
     },
     {
-      "tags": "get,llvm"
+      "tags": "cmake,get-cmake"
     },
     {
-      "tags": "cmake,get-cmake"
+      "tags": "get,llvm"
     }
+  ],
+  "extra_cache_tags_from_env": [
+    {"env":"CM_LLVM_CACHE_TAGS", "prefix":"llvm-"}
   ],
   "env": {},
   "cache": true,

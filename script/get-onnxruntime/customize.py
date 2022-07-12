@@ -26,12 +26,12 @@ def preprocess(i):
 
         return r
 
-    add_extra_cache_tags = []
-    if 'CM_PYTHON_VERSION' in env:
-        add_extra_cache_tags = ["deps-python-" + env['CM_PYTHON_VERSION']]
+#    add_extra_cache_tags = []
+#    if 'CM_PYTHON_VERSION' in env:
+#        add_extra_cache_tags = ["deps-python-" + env['CM_PYTHON_VERSION']]
 
 
-    return {'return':0, 'add_extra_cache_tags': add_extra_cache_tags}
+    return {'return':0} #, 'add_extra_cache_tags': add_extra_cache_tags}
 
 
 def postprocess(i):
