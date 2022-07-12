@@ -16,7 +16,7 @@
     }
   ],
   "extra_cache_tags_from_env": [
-    "CM_PYTHON_CACHE_TAGS":"python-"
+    {"CM_PYTHON_CACHE_TAGS":"python-"}
   ],
   "tags": [
     "get",
