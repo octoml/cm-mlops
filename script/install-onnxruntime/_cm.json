@@ -18,6 +18,9 @@
       "version_max_usable": "3.9.12"
     }
   ],
+  "extra_cache_tags_from_env": [
+    {"env":"CM_PYTHON_CACHE_TAGS", "prefix":"python-"}
+  ],
   "post_deps": [
     {
       "const": {

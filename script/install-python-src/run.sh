@@ -24,17 +24,36 @@ else
 fi
 
 mkdir src
+
 mkdir install
+
 cd src
+
+
+if [ -f "Python-${PYTHON_VERSION}.tgz" ] ; then
+ rm "Python-${PYTHON_VERSION}.tgz"
+fi
+
+pwd
 wget ${CM_WGET_URL}
 
 if [ "${?}" != "0" ]; then exit 1; fi
 
-tar xzf Python-${PYTHON_VERSION}.tgz && \
-rm -f Python-${PYTHON_VERSION}.tgz && \
-cd Python-${PYTHON_VERSION} && \
-./configure --enable-optimizations ${SHARED_BUILD_FLAGS} ${EXTRA_FLAGS} --with-ensurepip=install --prefix=${CUR_DIR}/install && \
-make -j${CM_MAKE_CORES} install && \
+tar xzf Python-${PYTHON_VERSION}.tgz
+if [ "${?}" != "0" ]; then exit 1; fi
+
+
+rm -f Python-${PYTHON_VERSION}.tgz
+if [ "${?}" != "0" ]; then exit 1; fi
+
+cd Python-${PYTHON_VERSION}
+
+./configure --enable-optimizations ${SHARED_BUILD_FLAGS} ${EXTRA_FLAGS} --with-ensurepip=install --prefix=${CUR_DIR}/install
+if [ "${?}" != "0" ]; then exit 1; fi
+
+make -j${CM_MAKE_CORES} install
+if [ "${?}" != "0" ]; then exit 1; fi
+
 cd ${CUR_DIR} && \
 rm -rf src
 

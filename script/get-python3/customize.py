@@ -59,7 +59,13 @@ def preprocess(i):
     env['CM_PYTHON_BIN']=file_name
     env['CM_PYTHON_BIN_WITH_PATH']=os.path.join(found_path, file_name)
 
-    return {'return':0}
+
+    add_extra_cache_tags = []
+
+    if 'virtual' not in env.get('CM_EXTRA_CACHE_TAGS','').split(','):
+        add_extra_cache_tags.append('non-virtual')
+
+    return {'return':0, 'add_extra_cache_tags': add_extra_cache_tags}
 
 
 def postprocess(i):
@@ -82,6 +88,9 @@ def postprocess(i):
     extra_tags = env.get('CM_EXTRA_CACHE_TAGS','')
     if extra_tags != '':
         tags += ',' + extra_tags
+
+    if 'virtual' not in extra_tags.split(','):
+        tags += ',non-virtual'
 
     env['CM_PYTHON_CACHE_TAGS'] = tags
 

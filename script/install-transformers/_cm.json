@@ -18,6 +18,9 @@
       "tags": "get,tensorflow,python-lib"
     }
   ],
+  "extra_cache_tags_from_env": [
+    {"env":"CM_PYTHON_CACHE_TAGS", "prefix":"python-"}
+  ],
   "post_deps": [
     {
       "const": {
