@@ -4,3 +4,4 @@ scipy
 onnx
 decorator
 attrs
+psutil
