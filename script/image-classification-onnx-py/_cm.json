@@ -22,7 +22,7 @@
       "tags": "get,dataset-aux,imagenet-aux,image-classification"
     },
     {
-      "tags": "get,ml-model,resnet50,image-classification,_onnx"
+      "tags": "get,ml-model-onnx,resnet50,image-classification"
     },
     {
       "tags": "get,onnxruntime,python-lib"
