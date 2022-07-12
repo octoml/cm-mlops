@@ -13,17 +13,19 @@
       "tags": "get,sys-utils-cm"
     },
     {
-      "tags": "get,python",
-      "version_max": "3.9.999"
+      "tags": "get,python"
     },
     {
-      "tags": "get,dataset,image-classification,original"
+      "tags": "get,dataset,imagenet,image-classification,original"
     },
     {
-      "tags": "get,dataset-aux,image-classification"
+      "tags": "get,dataset-aux,imagenet-aux,image-classification"
     },
     {
-      "tags": "get,ml-model,image-classification"
+      "tags": "get,ml-model,resnet50,image-classification,_onnx"
+    },
+    {
+      "tags": "get,onnxruntime,python-lib"
     }
   ],
   "env": {

@@ -6,7 +6,7 @@
   "clean_files": [],
   "deps": [
     {
-      "tags": "get,python",
+      "tags": "get,python3",
       "version_max_usable": "3.9.12",
       "version_max": "3.9.999"
     },

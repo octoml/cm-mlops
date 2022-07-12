@@ -23,6 +23,9 @@
     },
     {
       "tags": "get,imagenet-helper"
+    },
+    {
+      "tags": "get,torch,python-lib"
     }
   ],
   "env": {

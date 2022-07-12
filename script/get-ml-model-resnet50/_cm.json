@@ -16,7 +16,7 @@
   ],
   "uid": "56203e4e998b4bc0",
   "variations": {
-    "onnx-1.5-opset-11": {
+    "onnx": {
       "env": {
         "CM_ML_MODEL_ONNX_OPSET": "11",
         "CM_ML_MODEL_VER": "1.5",
