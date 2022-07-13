@@ -14,7 +14,7 @@ echo.
 
 cd %CM_TMP_CURRENT_SCRIPT_PATH%
 
-%CM_C_COMPILER_WITH_PATH% -O3 susan.c
+"%CM_C_COMPILER_WITH_PATH%" susan.c
 IF %ERRORLEVEL% NEQ 0 EXIT %ERRORLEVEL%
 
 rem Return to the original path obtained in CM
