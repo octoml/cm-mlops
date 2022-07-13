@@ -8,7 +8,6 @@ def preprocess(i):
     if os_info['platform'] != 'windows':
         return {'return':0}
 
-
     env = i['env']
 
     recursion_spaces = i['recursion_spaces']
@@ -27,6 +26,16 @@ def preprocess(i):
     if r['return'] >0 : return r
 
     found_path = r['found_path']
+
+    # Check vcvarall.bat
+    state = i['state']
+    script_prefix = state.get('script_prefix',[])
+
+    path_to_vcvarsall = os.path.join(os.path.dirname(found_path), 'vcvarsall.bat')
+    if os.path.isfile(path_to_vcvarsall):
+        s = os_info['run_bat'].replace('${bat_file}', '"'+path_to_vcvarsall+'"')
+        script_prefix.append(s)
+        state['script_prefix'] = script_prefix
 
     env['CM_CL_BIN']=file_name
     env['CM_CL_BIN_WITH_PATH']=os.path.join(found_path, file_name)
