@@ -6,7 +6,7 @@ echo.
 echo Checking compiler version ...
 echo.
 
-%CM_C_COMPILER_WITH_PATH% --version
+%CM_NVCC_BIN% -V
 
 echo.
 echo Compiling program ...
@@ -14,7 +14,7 @@ echo.
 
 cd %CM_TMP_CURRENT_SCRIPT_PATH%
 
-%CM_C_COMPILER_WITH_PATH% -O3 susan.c
+%CM_NVCC_BIN% print_cuda_devices.cu -allow-unsupported-compiler -DWINDOWS
 IF %ERRORLEVEL% NEQ 0 EXIT %ERRORLEVEL%
 
 rem Return to the original path obtained in CM
@@ -25,15 +25,6 @@ echo.
 
 cd %CM_TMP_CURRENT_PATH%
 
-IF NOT DEFINED CM_INPUT SET CM_INPUT=%CM_TMP_CURRENT_SCRIPT_PATH%\data.pgm
-IF NOT DEFINED CM_OUTPUT SET CM_OUTPUT=output_image_with_corners.pgm
-
-del %CM_OUTPUT%
-
-%CM_TMP_CURRENT_SCRIPT_PATH%\a.exe %CM_INPUT% %CM_OUTPUT% -c
+%CM_TMP_CURRENT_SCRIPT_PATH%\a.exe
 IF %ERRORLEVEL% NEQ 0 EXIT %ERRORLEVEL%
-
-rem -c
-rem -e
-rem -s
 

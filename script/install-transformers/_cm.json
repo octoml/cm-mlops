@@ -12,6 +12,9 @@
       "tags": "detect-cpu"
     },
     {
+      "tags": "get,cuda"
+    },
+    {
       "tags": "get,python"
     },
     {

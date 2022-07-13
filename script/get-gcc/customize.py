@@ -63,5 +63,6 @@ def postprocess(i):
     print (i['recursion_spaces'] + '    Detected version: {}'.format(version))
 
     env['CM_GCC_CACHE_TAGS'] = 'version-'+version
+    env['CM_COMPILER_CACHE_TAGS'] = 'version-'+version
 
     return {'return':0, 'version':version}
