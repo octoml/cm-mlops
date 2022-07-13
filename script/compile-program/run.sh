@@ -42,6 +42,5 @@ echo ""
 CMD="${CM_C_COMPILER_WITH_PATH} ${CM_LINKER_FLAGS} *.o -o ${BIN_NAME} ${CM_LD_LIBRARY_PATHS}"
 echo $CMD
 eval $CMD
-./$BIN_NAME
 
 test $? -eq 0 || exit 1

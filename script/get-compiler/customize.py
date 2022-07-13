@@ -52,10 +52,3 @@ def preprocess(i):
                 env['+CFLAGS'] += ["-march=znver2", "-flto"]
 
     return {'return':0}
-
-def postprocess(i):
-
-    env = i['env']
-    print(env)
-
-    return {'return':0}
