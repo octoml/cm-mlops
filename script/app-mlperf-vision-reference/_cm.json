@@ -49,7 +49,7 @@
       }
     },
     {
-      "tags": "get,dataset-aux,image-classification,imagenet",
+      "tags": "get,dataset-aux,image-classification,imagenet-aux",
       "enable_if_env": {
         "CM_MODEL": [
           "resnet50"
