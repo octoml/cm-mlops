@@ -9,6 +9,11 @@
       "tags": "set,echo-off,win"
     }
   ],
+  "post_deps": [
+    {
+      "tags": "get,compiler-flags"
+    }
+  ],
   "tags": [
     "get",
     "gcc",

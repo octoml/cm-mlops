@@ -44,6 +44,14 @@ def preprocess(i):
 
     env['CM_CPP_COMPILER_BIN']=file_name_cpp
     env['CM_CPP_COMPILER_WITH_PATH']=os.path.join(found_path, file_name_cpp)
+
+    env['FAST_COMPILER_FLAGS'] = "-O3"
+    env['FAST_LINKER_FLAGS'] = "-O3"
+    env['DEBUG_COMPILER_FLAGS'] = "-O0"
+    env['DEBUG_LINKER_FLAGS'] = "-O0"
+    env['DEFAULT_COMPILER_FLAGS'] = "-O2"
+    env['DEFAULT_LINKER_FLAGS'] = "-O2"
+    
     return {'return':0}
 
 
