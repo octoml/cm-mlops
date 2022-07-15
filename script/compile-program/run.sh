@@ -3,6 +3,7 @@
 # Compile
 
 BIN_NAME=${CM_BIN_NAME:-run.out}
+RUN_DIR=${CM_RUN_DIR:-.}
 rm -f ${BIN_NAME}
 
 if [ -z "${CM_SOURCE_FOLDER_PATH}" ]; then
@@ -41,7 +42,7 @@ done
 echo ""
 echo "Linking ..."
 echo ""
-CMD="${CM_C_COMPILER_WITH_PATH} ${CM_LINKER_FLAGS} *.o -o ${BIN_NAME} ${CM_LD_LIBRARY_PATHS}"
+CMD="${CM_C_COMPILER_WITH_PATH} ${CM_C_COMPILER_FLAGS}  *.o -o ${RUN_DIR}/${BIN_NAME} ${CM_C_LINKER_FLAGS} ${CM_LD_LIBRARY_PATHS}"
 echo $CMD
 eval $CMD
 

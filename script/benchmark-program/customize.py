@@ -7,18 +7,22 @@ def preprocess(i):
         return {'return':1, 'error': 'Windows is not supported in this script yet'}
 
     env = i['env']
-    if env['CM_ENABLE_NUMACTL']:
+
+    env['CM_BIN_NAME'] = env['CM_BIN_NAME'] if 'CM_BIN_NAME' in env else "run.out"
+    
+    if env['CM_ENABLE_NUMACTL'].lower() in ["on", "1", "true", "yes"]:
+        env['CM_ENABLE_NUMACTL'] = "1"
         CM_RUN_PREFIX = "numactl " + env['CM_NUMACTL_MEMBIND'] + ' '
     else:
         CM_RUN_PREFIX = ''
-    CM_RUN_PREFIX += env['CM_RUN_PREFIX']
-    env['CM_RUN_PREIFX'] = CM_RUN_PREFIX
+    CM_RUN_PREFIX += env['CM_RUN_PREFIX'] if 'CM_RUN_PREFIX' in env else ''
+    env['CM_RUN_PREFIX'] = CM_RUN_PREFIX
 
-    CM_RUN_SUFFIX = (env['CM_REDIRECT_OUT'] + ' ') if env['CM_REDIRECT_OUT'] else ''
-    CM_RUN_SUFFIX += env['CM_REDIRECT_ERR'] if env['CM_REDIRECT_ERR'] else ''
+    CM_RUN_SUFFIX = (env['CM_REDIRECT_OUT'] + ' ') if 'CM_REDIRECT_OUT' in env else ''
+    CM_RUN_SUFFIX += (env['CM_REDIRECT_ERR'] + ' ') if 'CM_REDIRECT_ERR' in env else ''
     env['CM_RUN_SUFFIX'] = env['CM_RUN_SUFFIX'] + CM_RUN_SUFFIX
 
-    env['CM_RUN_COMMAND'] = CM_RUN_PREFIX + ' ' + env['CM_RUN_BINARY'] + ' ' + env['CM_RUN_SUFFIX']
+    env['CM_RUN_CMD'] = CM_RUN_PREFIX + ' ./' + env['CM_BIN_NAME'] + ' ' + env['CM_RUN_SUFFIX']
 
     return {'return':0}
 

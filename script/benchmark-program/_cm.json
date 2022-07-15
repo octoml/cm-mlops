@@ -11,18 +11,13 @@
     }
   ],
   "env": {
-    "CM_RUN_PREFIX":"",
-    "CM_RUN_SUFFIX":"",
-    "CM_ENABLE_NUMACTL":0,
-    "CM_REDIRECT_OUT":0,
-    "CM_REDIRECT_ERR":0,
-    "CM_ENABLE_PROFILING":0,
-    "CM_ENABLE_PERF":0
+    "CM_ENABLE_NUMACTL":"0",
+    "CM_ENABLE_PROFILING":"0"
   },
   "tags": [
     "program",
     "benchmark",
-    "run"
+    "benchmark-program"
   ],
   "uid": "19f369ef47084895",
   "variations": {
