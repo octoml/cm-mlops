@@ -7,10 +7,10 @@ def preprocess(i):
         return {'return':1, 'error': 'Windows is not supported in this script yet'}
     
     env = i['env']
-    env['+CFLAGS'] = env.get('+CFLAGS', [])
-    env['+CXXFLAGS'] = env.get('+CXXFLAGS', [])
-    env['+FFLAGS'] = env.get('+FFLAGS', [])
-    env['+LDFLAGS'] = env.get('+LDFLAGS', [])
+    env['+ CFLAGS'] = env.get('+ CFLAGS', [])
+    env['+ CXXFLAGS'] = env.get('+ CXXFLAGS', [])
+    env['+ FFLAGS'] = env.get('+ FFLAGS', [])
+    env['+ LDFLAGS'] = env.get('+ LDFLAGS', [])
     
     if "FAST_COMPILATION" in env:
         DEFAULT_COMPILER_FLAGS = env.get("FAST_COMPILER_FLAGS", "-O3")
@@ -22,19 +22,18 @@ def preprocess(i):
         DEFAULT_COMPILER_FLAGS = env.get("DEFAULT_COMPILER_FLAGS", "-O2")
         DEFAULT_LINKER_FLAGS = env.get("DEFAULT_LINKER_FLAGS", "-O2")
     
-    env['+CFLAGS'] += DEFAULT_COMPILER_FLAGS.split(" ")
-    env['+CXXFLAGS'] += DEFAULT_COMPILER_FLAGS.split(" ")
-    env['+FFLAGS'] += DEFAULT_COMPILER_FLAGS.split(" ")
-    env['+LDFLAGS'] += DEFAULT_LINKER_FLAGS.split(" ")
-
+    env['+ CFLAGS'] += DEFAULT_COMPILER_FLAGS.split(" ")
+    env['+ CXXFLAGS'] += DEFAULT_COMPILER_FLAGS.split(" ")
+    env['+ FFLAGS'] += DEFAULT_COMPILER_FLAGS.split(" ")
+    env['+ LDFLAGS'] += DEFAULT_LINKER_FLAGS.split(" ")
 
     if env['CM_C_COMPILER_BIN'] == 'icc':
         if env['CM_CPUINFO_Vendor_ID'] == 'GenuineIntel':
             if int(env['CM_CPUINFO_CPU_family']) >= 0:
-                env['+CFLAGS'] += ["-ipo"]
+                env['+ CFLAGS'] += ["-ipo"]
     if env['CM_C_COMPILER_BIN'] == 'gcc':
         if env['CM_CPUINFO_Vendor_ID'] == 'AMD':
             if int(env['CM_CPUINFO_CPU_family']) >= 0:
-                env['+CFLAGS'] += ["-march=znver2", "-flto"]
+                env['+ CFLAGS'] += ["-march=znver2", "-flto"]
 
     return {'return':0}

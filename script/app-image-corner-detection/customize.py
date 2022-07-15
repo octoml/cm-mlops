@@ -13,7 +13,6 @@ def preprocess(i):
 def postprocess(i):
     
     env = i['env']
-    env['+LDCFLAGS'] = ["-lm"]
-    print(env)
+    env['+ LDCFLAGS'] = ["-lm"]
 
     return {'return':0}

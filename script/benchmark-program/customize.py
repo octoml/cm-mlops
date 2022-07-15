@@ -20,7 +20,7 @@ def preprocess(i):
 
     CM_RUN_SUFFIX = (env['CM_REDIRECT_OUT'] + ' ') if 'CM_REDIRECT_OUT' in env else ''
     CM_RUN_SUFFIX += (env['CM_REDIRECT_ERR'] + ' ') if 'CM_REDIRECT_ERR' in env else ''
-    env['CM_RUN_SUFFIX'] = env['CM_RUN_SUFFIX'] + CM_RUN_SUFFIX
+    env['CM_RUN_SUFFIX'] = env['CM_RUN_SUFFIX'] + CM_RUN_SUFFIX if 'CM_RUN_SUFFIX' in env else CM_RUN_SUFFIX
 
     env['CM_RUN_CMD'] = CM_RUN_PREFIX + ' ./' + env['CM_BIN_NAME'] + ' ' + env['CM_RUN_SUFFIX']
 

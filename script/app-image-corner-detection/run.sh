@@ -4,8 +4,7 @@ echo "CM_SOURCE_FOLDER_PATH=${CM_TMP_CURRENT_SCRIPT_PATH}" >> tmp-run-env.out
 echo 'CM_C_SOURCE_FILES="susan.c"' >> tmp-run-env.out
 echo 'CM_BIN_NAME=image-corner' >> tmp-run-env.out
 CUR=${CM_TMP_CURRENT_SCRIPT_PATH:-$PWD}
-cd $CUR
-mkdir -p output
+mkdir -p $CUR"/output"
 OUT=${CUR}/output
 
 CM_INPUT=${CM_INPUT:-${CUR}/data.pgm}
