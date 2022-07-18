@@ -30,7 +30,7 @@ cd ${CM_TMP_CURRENT_PATH}
 CM_INPUT=${CM_INPUT:-${CM_TMP_CURRENT_SCRIPT_PATH}/data.pgm}
 CM_OUTPUT=${CM_OUTPUT:-output_image_with_corners.pgm}
 
-rm ${CM_OUTPUT}
+rm -f ${CM_OUTPUT}
 
 ${CM_TMP_CURRENT_SCRIPT_PATH}/a.out ${CM_INPUT} ${CM_OUTPUT} -c
 test $? -eq 0 || exit 1
