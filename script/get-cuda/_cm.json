@@ -9,12 +9,19 @@
       "tags": "set,echo-off,win"
     },
     {
-      "tags": "get,cl",
       "enable_if_env": {
         "CM_WINDOWS": []
-      }
+      },
+      "tags": "get,cl"
     }
   ],
+  "local_env_keys": [
+    "CM_CUDA_*"
+  ],
+  "new_env_only_keys": [
+    "+PATH"
+  ],
+  "new_env_only_keys_from_local_env_keys": true,
   "tags": [
     "get",
     "cuda",

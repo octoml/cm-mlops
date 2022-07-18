@@ -13,11 +13,11 @@
     "CM_PYTHON_*"
   ],
   "new_env_only_keys": [
-    "CM_PYTHON_*",
     "+LD_LIBRARY_PATH",
     "+C_INCLUDE_PATH",
     "+PATH"
   ],
+  "new_env_only_keys_from_local_env_keys": true,
   "tags": [
     "get",
     "python",
