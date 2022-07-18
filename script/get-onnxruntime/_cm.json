@@ -17,6 +17,9 @@
       "tags": "detect-cpu"
     }
   ],
+  "new_env_only_keys": [
+    "CM_ONNXRUNTIME_*"
+  ],
   "extra_cache_tags_from_env": [
     {"env":"CM_PYTHON_CACHE_TAGS", "prefix":"python-"}
   ],
