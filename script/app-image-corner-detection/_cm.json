@@ -7,14 +7,23 @@
       "tags": "set,echo-off,win"
     },
     {
+      "skip_if_env": {
+        "CM_SKIP_COMPILE": []
+      },
       "tags": "get,compiler"
     }
   ],
   "post_deps": [
     {
+      "skip_if_env": {
+        "CM_SKIP_COMPILE": []
+      },
       "tags": "compile-program"
     },
     {
+      "skip_if_env": {
+        "CM_SKIP_RUN": []
+      },
       "tags": "benchmark-program"
     }
   ],
