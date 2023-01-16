@@ -1,0 +1,49 @@
+{
+  "alias": "get-mlperf-inference-sut-configs",
+  "automation_alias": "script",
+  "automation_uid": "5b4e0237da074764",
+  "cache": false,
+  "category": "Modular MLPerf benchmarks",
+  "default_env": {
+    "CM_GIT_URL": "",
+    "CM_SUT_CONFIGS_PATH": ""
+  },
+  "input_mapping": {
+    "configs_git_url": "CM_GIT_URL",
+    "repo_path": "CM_SUT_CONFIGS_PATH"
+  },
+  "new_env_keys": [
+    "CM_HW_*",
+    "CM_SUT_*"
+  ],
+  "new_state_keys": [
+    "CM_SUT_*"
+  ],
+  "tags": [
+    "get",
+    "mlperf",
+    "inference",
+    "sut",
+    "configs",
+    "sut-configs"
+  ],
+  "uid": "5449f38911854ea2",
+  "variations": {
+    "octoml": {
+      "env": {
+        "CM_GIT_CHECKOUT_FOLDER": "configs",
+        "CM_GIT_URL": "https://github.com/arjunsuresh/mlperf-inference-configs",
+        "CM_SUT_USE_EXTERNAL_CONFIG_REPO": "yes"
+      },
+      "prehook_deps": [
+        {
+          "force_env_keys": [
+            "CM_GIT_URL",
+            "CM_GIT_CHECKOUT_*"
+          ],
+          "tags": "get,git,repo,_repo.mlperf_inference_configs_octoml"
+        }
+      ]
+    }
+  }
+}
